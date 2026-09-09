@@ -1,63 +1,23 @@
-[
+{
+  "templates": [
     {
-        "id": "template-01",
-        "name": "Classic Green",
-        "nameBn": "ক্লাসিক গ্রিন",
-
-        "description": "Original Design",
-        "descriptionBn": "মূল ডিজাইন",
-
-        "preview": "template-01.jpg",
-        "css": "template-01.css",
-
-        "college": {
-            "en": "GOVT. DEBENDRA COLLEGE",
-            "bn": "সরকারি দেবেন্দ্র কলেজ"
-        },
-
-        "department": {
-            "en": "DEPARTMENT OF ISLAMIC STUDIES",
-            "bn": "ইসলামী স্টাডিজ বিভাগ"
-        },
-
-        "assignment": {
-            "en": "ASSIGNMENT ON",
-            "bn": "অ্যাসাইনমেন্ট"
-        },
-
-        "logo": "university.png",
-        "border": "border.png"
-    }
-
-    {
-    "id": "02",
-    "name": "Emerald Frame",
-    "nameBn": "এমেরাল্ড ফ্রেম",
-
-    "description": "Modern Emerald Design",
-    "descriptionBn": "আধুনিক এমেরাল্ড ডিজাইন",
-
-    "preview": "template-02.jpg",
-
-    "css": "template-02.css",
-
-    "border": "",
-
-    "logo": "university.png",
-
-    "college": {
-        "en": "GOVT. DEBENDRA COLLEGE",
-        "bn": "সরকারি দেবেন্দ্র কলেজ"
+      "id": "template-01",
+      "name": "Classic Green",
+      "nameBn": "ক্লাসিক গ্রিন",
+      "description": "Original Design",
+      "descriptionBn": "মূল ডিজাইন",
+      "preview": "template-01.jpg",
+      "css": "template-01.css"
     },
 
-    "department": {
-        "en": "DEPARTMENT OF ISLAMIC STUDIES",
-        "bn": "ইসলামী স্টাডিজ বিভাগ"
-    },
-
-    "assignment": {
-        "en": "ASSIGNMENT ON",
-        "bn": "অ্যাসাইনমেন্ট"
+    {
+      "id": "template-02",
+      "name": "Elegant Border",
+      "nameBn": "এলিগ্যান্ট বর্ডার",
+      "description": "Modern Assignment Cover",
+      "descriptionBn": "আধুনিক অ্যাসাইনমেন্ট কভার",
+      "preview": "template-02.jpg",
+      "css": "template-02.css"
     }
-    }
-]
+  ]
+}
