@@ -1,981 +1,1398 @@
 /* =========================================================
    TEMPLATE 02
-   MODERN ROYAL — BLUE / VIOLET
-   University Logo + CSS Shapes
-   ========================================================= */
+   Modern Colorful Academic Cover
+   NO BORDER IMAGE
+   CSS SHAPES + STROKES ONLY
+========================================================= */
 
 
 /* =========================================================
-   01 — A4 PAGE
-   ========================================================= */
+   01. A4 PAGE
+========================================================= */
 
 .page{
-    position:relative;
-    overflow:hidden;
+    position:relative !important;
 
-    box-sizing:border-box;
+    width:210mm !important;
+    height:297mm !important;
+
+    margin:0 !important;
+
+    overflow:hidden !important;
 
     background:
         radial-gradient(
-            circle at 8% 6%,
-            rgba(37,99,235,.13),
-            transparent 24%
+            circle at 100% 0%,
+            rgba(111,76,255,.13),
+            transparent 30%
         ),
         radial-gradient(
-            circle at 94% 88%,
-            rgba(124,58,237,.12),
-            transparent 27%
+            circle at 0% 100%,
+            rgba(0,180,150,.10),
+            transparent 30%
         ),
         linear-gradient(
-            145deg,
+            135deg,
             #ffffff 0%,
-            #fafaff 55%,
-            #f7f5ff 100%
-        );
+            #fbfaff 48%,
+            #f5f2ff 100%
+        ) !important;
 
-    color:#182033;
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.10);
 
-    font-family:
-        "Times New Roman",
-        serif;
+    border:none !important;
 }
 
 
 /* =========================================================
-   02 — TEMPLATE 01 IMAGE BORDER OFF
-   ========================================================= */
+   02. REMOVE OLD BORDER IMAGE
+========================================================= */
 
-.page .page-border{
+.page-border{
     display:none !important;
+    visibility:hidden !important;
 }
 
 
 /* =========================================================
-   03 — OUTER DECORATIVE CIRCLE
-   ========================================================= */
+   03. CSS DECORATIVE FRAME
+========================================================= */
 
 .page::before{
+
     content:"";
 
     position:absolute;
 
-    width:65mm;
-    height:65mm;
+    top:12mm;
+    left:12mm;
+    right:12mm;
+    bottom:12mm;
 
-    top:-30mm;
-    left:-28mm;
+    border:0.45mm solid rgba(84,68,190,.22);
 
-    border-radius:50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #1d4ed8,
-            #6366f1 55%,
-            #7c3aed
-        );
-
-    opacity:.96;
+    border-radius:8mm;
 
     z-index:0;
+
+    pointer-events:none;
 }
 
 
-/* =========================================================
-   04 — BOTTOM DECORATIVE CIRCLE
-   ========================================================= */
+/* inner decorative stroke */
 
 .page::after{
+
     content:"";
 
     position:absolute;
 
-    width:75mm;
-    height:75mm;
+    top:15mm;
+    left:15mm;
+    right:15mm;
+    bottom:15mm;
 
-    right:-32mm;
-    bottom:-34mm;
+    border:0.25mm solid rgba(37,170,142,.20);
+
+    border-radius:6mm;
+
+    z-index:0;
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   04. COLOR SHAPES
+========================================================= */
+
+.page-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:48mm;
+    height:48mm;
+
+    top:-20mm;
+    left:-20mm;
 
     border-radius:50%;
 
     background:
         linear-gradient(
             135deg,
-            #7c3aed,
-            #6366f1 50%,
-            #2563eb
+            #6753ff,
+            #9a5cff
         );
 
-    opacity:.92;
-
-    z-index:0;
+    z-index:-1;
 }
 
-
-/* =========================================================
-   05 — MAIN CONTENT
-   ========================================================= */
-
-.page-content{
-    position:relative;
-
-    z-index:2;
-
-    height:100%;
-
-    box-sizing:border-box;
-
-    padding:
-        19mm
-        18mm
-        16mm;
-}
-
-
-/* =========================================================
-   06 — INNER CSS STROKE
-   ========================================================= */
-
-.page-content::before{
-    content:"";
-
-    position:absolute;
-
-    inset:7mm;
-
-    border-radius:7mm;
-
-    border:
-        .55mm solid
-        rgba(79,70,229,.30);
-
-    box-shadow:
-        inset 0 0 0 .7mm
-        rgba(255,255,255,.75);
-
-    pointer-events:none;
-
-    z-index:0;
-}
-
-
-/* =========================================================
-   07 — TOP RIGHT DECORATION
-   ========================================================= */
 
 .page-content::after{
+
     content:"";
 
     position:absolute;
 
-    width:23mm;
-    height:23mm;
+    width:55mm;
+    height:55mm;
 
-    top:11mm;
-    right:11mm;
+    right:-25mm;
+    bottom:-25mm;
 
     border-radius:50%;
 
-    border:
-        1mm solid
-        rgba(99,102,241,.22);
+    background:
+        linear-gradient(
+            135deg,
+            #7655ff,
+            #9b63ff
+        );
 
-    box-shadow:
-        0 0 0 3mm
-        rgba(99,102,241,.06),
-        0 0 0 6mm
-        rgba(124,58,237,.035);
-
-    pointer-events:none;
-
-    z-index:0;
+    z-index:-1;
 }
 
 
 /* =========================================================
-   08 — COLLEGE NAME
-   ========================================================= */
+   05. CONTENT AREA
+========================================================= */
+
+.page-content{
+
+    position:absolute !important;
+
+    left:15mm !important;
+    right:15mm !important;
+
+    top:16mm !important;
+    bottom:14mm !important;
+
+    width:auto !important;
+
+    z-index:2 !important;
+
+    display:flex !important;
+
+    flex-direction:column !important;
+
+    min-width:0 !important;
+
+    box-sizing:border-box;
+}
+
+
+/* =========================================================
+   06. COLLEGE NAME
+========================================================= */
 
 .college-name{
+
+    display:block !important;
+
+    width:100% !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    text-align:center !important;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif !important;
+
+    font-size:23pt !important;
+
+    font-weight:800 !important;
+
+    line-height:1.18 !important;
+
+    letter-spacing:.2px !important;
+
+    color:#143f35 !important;
+
+    background:none !important;
+
+    -webkit-background-clip:initial !important;
+    background-clip:initial !important;
+
+    -webkit-text-fill-color:#143f35 !important;
+
+    white-space:normal !important;
+
+    overflow-wrap:break-word !important;
+
+    word-break:normal !important;
+
     position:relative;
 
-    z-index:3;
-
-    text-align:center;
-
-    margin-top:2mm;
-
-    color:#312e81;
-
-    font-size:19pt;
-
-    font-weight:700;
-
-    line-height:1.2;
-
-    letter-spacing:.6px;
-
-    text-transform:uppercase;
+    z-index:5;
 }
 
 
 /* =========================================================
-   09 — UNIVERSITY LOGO
-   ========================================================= */
+   07. COLLEGE LOGO
+   65+ SIZE
+========================================================= */
 
 .college-logo{
+
+    display:block !important;
+
+    width:68mm !important;
+    height:68mm !important;
+
+    min-width:68mm !important;
+    min-height:68mm !important;
+
+    margin:5mm auto 3mm !important;
+
+    flex:none !important;
+
+    object-fit:contain !important;
+
+    position:relative !important;
+
+    z-index:5 !important;
+
+    border:none !important;
+
+    outline:none !important;
+
+    background:transparent !important;
+
+    /*
+       IMPORTANT:
+       assets/university.png automatically used.
+    */
+    content:url("assets/university.png") !important;
+}
+
+
+/* =========================================================
+   08. LOGO GLOW / CIRCLE
+========================================================= */
+
+.college-logo{
+
+    filter:
+        drop-shadow(
+            0 3px 8px rgba(70,65,180,.15)
+        ) !important;
+}
+
+
+/* =========================================================
+   09. DEPARTMENT
+========================================================= */
+
+.department{
+
+    display:block !important;
+
+    width:100% !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    text-align:center !important;
+
+    font-family:
+        "Roboto Condensed",
+        Arial,
+        sans-serif !important;
+
+    font-size:18pt !important;
+
+    font-weight:800 !important;
+
+    line-height:1.2 !important;
+
+    letter-spacing:.2px !important;
+
+    color:#4d3ac8 !important;
+
+    background:none !important;
+
+    -webkit-background-clip:initial !important;
+    background-clip:initial !important;
+
+    -webkit-text-fill-color:#4d3ac8 !important;
+
+    white-space:normal !important;
+
+    overflow-wrap:break-word !important;
+
     position:relative;
 
-    z-index:3;
+    z-index:5;
+}
+
+
+/* =========================================================
+   10. DEPARTMENT UNDERLINE
+========================================================= */
+
+.department::after{
+
+    content:"";
 
     display:block;
 
-    width:32mm;
-    height:32mm;
+    width:55mm;
 
-    margin:
-        7mm auto
-        5mm;
+    height:.8mm;
 
-    padding:2mm;
+    margin:3mm auto 0;
 
-    box-sizing:border-box;
-
-    object-fit:contain;
-
-    background:#ffffff;
-
-    border-radius:50%;
-
-    box-shadow:
-        0 0 0 .65mm rgba(37,99,235,.22),
-        0 0 0 1.6mm rgba(124,58,237,.06),
-        0 3mm 9mm rgba(49,46,129,.12);
-}
-
-
-/* =========================================================
-   10 — DEPARTMENT
-   ========================================================= */
-
-.department{
-    position:relative;
-
-    z-index:3;
-
-    width:max-content;
-
-    max-width:100%;
-
-    margin:
-        2mm auto
-        7mm;
-
-    padding:
-        2.5mm 8mm;
-
-    border-radius:10mm;
+    border-radius:10px;
 
     background:
         linear-gradient(
             90deg,
-            #eef2ff,
-            #f5f3ff
+            #6753ff,
+            #8d55ff,
+            #26a889
         );
-
-    color:#4338ca;
-
-    font-size:12pt;
-
-    font-weight:700;
-
-    line-height:1.3;
-
-    letter-spacing:.4px;
-
-    text-align:center;
-
-    box-shadow:
-        inset 0 0 0 .45mm
-        rgba(99,102,241,.20);
 }
 
 
 /* =========================================================
-   11 — ASSIGNMENT BOX
-   ========================================================= */
+   11. ASSIGNMENT SECTION
+========================================================= */
 
 .assignment-box{
-    position:relative;
 
-    z-index:3;
+    position:relative !important;
 
-    margin-top:5mm;
+    width:100% !important;
 
-    padding:
-        6mm
-        7mm
-        6mm;
+    margin-top:12mm !important;
 
-    border-radius:5mm;
+    padding:6mm 7mm 5mm !important;
+
+    box-sizing:border-box !important;
 
     background:
         linear-gradient(
-            145deg,
-            rgba(239,246,255,.78),
-            rgba(250,245,255,.82)
-        );
+            135deg,
+            rgba(255,255,255,.96),
+            rgba(248,246,255,.94)
+        ) !important;
+
+    border:none !important;
+
+    border-radius:7mm !important;
 
     box-shadow:
-        inset 0 0 0 .45mm
-        rgba(99,102,241,.20),
+        0 4px 15px rgba(57,45,130,.08),
+        inset 0 0 0 .35mm rgba(91,73,190,.30) !important;
 
-        0 3mm 10mm
-        rgba(49,46,129,.055);
+    overflow:hidden !important;
+
+    z-index:3;
 }
 
 
-/* =========================================================
-   12 — ASSIGNMENT ON
-   ========================================================= */
+/* top colorful stroke */
 
-.assignment-on{
-    position:relative;
+.assignment-box::before{
 
-    text-align:center;
-
-    margin-bottom:5mm;
-
-    padding-bottom:3mm;
-
-    color:#6d28d9;
-
-    font-size:13pt;
-
-    font-weight:700;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-}
-
-
-.assignment-on::after{
     content:"";
 
     position:absolute;
 
-    left:25%;
-    right:25%;
+    top:0;
+    left:50%;
 
-    bottom:0;
+    transform:translateX(-50%);
 
-    height:.75mm;
+    width:70mm;
 
-    border-radius:10mm;
+    height:1mm;
+
+    border-radius:10px;
 
     background:
         linear-gradient(
             90deg,
-            #2563eb,
-            #6366f1,
-            #7c3aed
+            #6753ff,
+            #9a50ff,
+            #26a889
         );
 }
 
 
 /* =========================================================
-   13 — TOPIC ROW
-   ========================================================= */
+   12. ASSIGNMENT ON
+========================================================= */
+
+.assignment-on{
+
+    display:block !important;
+
+    width:100% !important;
+
+    margin:0 0 3mm !important;
+
+    padding:0 !important;
+
+    text-align:center !important;
+
+    font-family:
+        "Roboto Condensed",
+        Arial,
+        sans-serif !important;
+
+    font-size:15pt !important;
+
+    font-weight:800 !important;
+
+    line-height:1.2 !important;
+
+    color:#4936b8 !important;
+
+    background:none !important;
+
+    -webkit-text-fill-color:#4936b8 !important;
+
+    white-space:normal !important;
+}
+
+
+/* =========================================================
+   13. TOPIC SECTION
+========================================================= */
+
+.topic-section{
+
+    width:100% !important;
+
+    min-width:0 !important;
+
+    margin:0 !important;
+}
+
+
+/* =========================================================
+   14. TOPIC ROW
+========================================================= */
 
 .topic-row{
-    display:flex;
 
-    align-items:flex-start;
+    width:100% !important;
 
-    gap:4mm;
+    min-width:0 !important;
 
-    margin-top:4mm;
+    display:grid !important;
 
-    padding:
-        3mm
-        0
-        4mm;
+    grid-template-columns:auto minmax(0,1fr) !important;
 
-    border-bottom:
-        .45mm dashed
-        rgba(99,102,241,.34);
+    column-gap:3mm !important;
+
+    align-items:start !important;
 }
 
 
 /* =========================================================
-   14 — TOPIC LABEL
-   ========================================================= */
+   15. TOPIC LABEL
+========================================================= */
 
 .topic-label{
-    flex:0 0 auto;
 
-    color:#3730a3;
+    min-width:max-content !important;
 
-    font-size:11pt;
+    white-space:nowrap !important;
 
-    font-weight:700;
+    font-family:
+        "Times New Roman",
+        serif !important;
 
-    letter-spacing:.3px;
+    font-size:13.5pt !important;
+
+    font-weight:700 !important;
+
+    line-height:8mm !important;
+
+    color:#253f3a !important;
 }
 
 
 /* =========================================================
-   15 — TOPIC WRITING AREA
-   ========================================================= */
+   16. TOPIC WRITING AREA
+========================================================= */
 
 .topic-writing-area{
-    flex:1;
 
-    min-width:0;
+    position:relative !important;
+
+    width:100% !important;
+
+    min-width:0 !important;
+
+    height:17mm !important;
+
+    overflow:hidden !important;
+
+    box-sizing:border-box !important;
 }
 
 
-/* =========================================================
-   16 — TOPIC TEXT
-   ========================================================= */
+/* dotted lines */
 
-.topic-text{
-    min-height:7mm;
+.topic-writing-area::before{
 
-    color:#252b3a;
-
-    font-size:11.5pt;
-
-    line-height:1.5;
-
-    overflow-wrap:anywhere;
-}
-
-
-/* =========================================================
-   17 — COURSE AREA
-   ========================================================= */
-
-.course-area{
-    position:relative;
-
-    text-align:center;
-
-    margin-top:5mm;
-
-    padding-top:2mm;
-
-    color:#252a3a;
-
-    font-size:11pt;
-
-    line-height:1.55;
-}
-
-
-.course-area > div{
-    margin:1mm 0;
-}
-
-
-/* =========================================================
-   18 — COURSE LABELS
-   ========================================================= */
-
-#courseNameLabel,
-#courseCodeLabel{
-    color:#4338ca;
-
-    font-weight:700;
-}
-
-
-/* =========================================================
-   19 — COURSE NAME
-   ========================================================= */
-
-#previewCourseName{
-    color:#172033;
-
-    font-weight:700;
-
-    letter-spacing:.2px;
-}
-
-
-/* =========================================================
-   20 — COURSE CODE
-   ========================================================= */
-
-#previewCourseCode{
-    color:#6d28d9;
-
-    font-weight:700;
-}
-
-
-/* =========================================================
-   21 — SUBMITTED AREA
-   ========================================================= */
-
-.submitted-area{
-    position:relative;
-
-    z-index:3;
-
-    display:grid;
-
-    grid-template-columns:
-        minmax(0,1fr)
-        auto
-        minmax(0,1fr);
-
-    gap:7mm;
-
-    margin-top:11mm;
-
-    padding:
-        7mm
-        3mm;
-
-    border-radius:5mm;
-
-    background:
-        rgba(255,255,255,.76);
-
-    box-shadow:
-        inset 0 0 0 .45mm
-        rgba(99,102,241,.18);
-}
-
-
-/* =========================================================
-   22 — SUBMIT COLUMN
-   ========================================================= */
-
-.submit-column{
-    position:relative;
-
-    min-width:0;
-}
-
-
-/* =========================================================
-   23 — SUBMITTED HEADING
-   ========================================================= */
-
-.submit-heading{
-    position:relative;
-
-    display:inline-block;
-
-    margin-bottom:4mm;
-
-    padding-bottom:2mm;
-
-    color:#4338ca;
-
-    font-size:11pt;
-
-    font-weight:700;
-
-    font-style:italic;
-
-    letter-spacing:.4px;
-}
-
-
-.submit-heading::after{
     content:"";
 
     position:absolute;
 
     left:0;
+    right:0;
 
-    bottom:0;
+    top:8.2mm;
 
-    width:18mm;
+    height:1px;
 
-    height:.8mm;
+    background-image:
+        radial-gradient(
+            circle,
+            #6f6a86 .7px,
+            transparent .95px
+        );
 
-    border-radius:10mm;
+    background-size:4px 1px;
+
+    background-repeat:repeat-x;
+
+    z-index:1;
+}
+
+
+.topic-writing-area::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    top:16.1mm;
+
+    height:1px;
+
+    background-image:
+        radial-gradient(
+            circle,
+            #6f6a86 .7px,
+            transparent .95px
+        );
+
+    background-size:4px 1px;
+
+    background-repeat:repeat-x;
+
+    z-index:1;
+}
+
+
+/* =========================================================
+   17. TOPIC TEXT
+========================================================= */
+
+.topic-text{
+
+    position:relative !important;
+
+    z-index:3 !important;
+
+    width:100% !important;
+
+    height:17mm !important;
+
+    margin:0 !important;
+
+    padding:0 !important;
+
+    background:transparent !important;
+
+    color:#263b37 !important;
+
+    font-family:
+        "Hind Siliguri",
+        sans-serif !important;
+
+    font-size:13pt !important;
+
+    font-weight:400 !important;
+
+    line-height:8mm !important;
+
+    white-space:pre-wrap !important;
+
+    overflow:hidden !important;
+
+    overflow-wrap:anywhere !important;
+
+    word-break:normal !important;
+
+    text-align:left !important;
+
+    border:none !important;
+
+    outline:none !important;
+}
+
+
+/* =========================================================
+   18. COURSE AREA
+========================================================= */
+
+.course-area{
+
+    width:100% !important;
+
+    min-width:0 !important;
+
+    margin-top:1.5mm !important;
+
+    padding-top:2mm !important;
+
+    text-align:center !important;
+
+    font-family:
+        "Times New Roman",
+        serif !important;
+
+    font-size:13.5pt !important;
+
+    font-weight:600 !important;
+
+    line-height:1.45 !important;
+
+    color:#3d348a !important;
+
+    overflow:hidden !important;
+}
+
+
+.course-area > div{
+
+    width:100% !important;
+
+    margin:0 !important;
+
+    padding:0 !important;
+
+    white-space:normal !important;
+
+    overflow-wrap:anywhere !important;
+
+    word-break:normal !important;
+}
+
+
+/* =========================================================
+   19. SUBMITTED AREA
+========================================================= */
+
+.submitted-area{
+
+    position:relative !important;
+
+    width:100% !important;
+
+    min-width:0 !important;
+
+    margin-top:17mm !important;
+
+    display:grid !important;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(0,1fr) !important;
+
+    column-gap:18mm !important;
+
+    flex:none !important;
+
+    padding:5mm 0 !important;
+
+    box-sizing:border-box !important;
 
     background:
-        linear-gradient(
-            90deg,
-            #2563eb,
-            #7c3aed
-        );
+        rgba(255,255,255,.72) !important;
+
+    border:none !important;
+
+    border-radius:5mm !important;
+
+    box-shadow:
+        inset 0 0 0 .3mm rgba(85,72,170,.16) !important;
 }
 
 
 /* =========================================================
-   24 — SUBMITTED INFORMATION
-   ========================================================= */
+   20. CENTER DOUBLE STROKE
+========================================================= */
 
-.submit-info{
-    color:#252a3a;
+.submitted-area::before,
+.submitted-area::after{
 
-    font-size:10.5pt;
+    content:"";
 
-    line-height:1.55;
+    position:absolute;
 
-    overflow-wrap:anywhere;
-}
+    top:3mm;
+    bottom:3mm;
 
+    width:.45mm;
 
-/* =========================================================
-   25 — CENTER DIVIDER
-   ========================================================= */
-
-.vertical-line{
-    width:.8mm;
-
-    min-height:30mm;
-
-    align-self:stretch;
-
-    border-radius:10mm;
+    border-radius:10px;
 
     background:
         linear-gradient(
             180deg,
-            transparent 0%,
-            #2563eb 18%,
-            #6366f1 50%,
-            #7c3aed 82%,
-            transparent 100%
+            #6753ff,
+            #4536ad
         );
 
-    opacity:.78;
+    z-index:4;
+
+    pointer-events:none;
+}
+
+
+.submitted-area::before{
+
+    left:calc(50% - 1.7mm);
+}
+
+
+.submitted-area::after{
+
+    left:calc(50% + 1.7mm);
 }
 
 
 /* =========================================================
-   26 — DATE AREA
-   ========================================================= */
+   21. SUBMIT COLUMN
+========================================================= */
 
-.date-area{
+.submit-column{
+
+    min-width:0 !important;
+
+    overflow:hidden !important;
+
     position:relative;
-
-    z-index:3;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:4mm;
-
-    margin-top:16mm;
-
-    color:#3730a3;
-
-    font-size:10.5pt;
-
-    font-weight:700;
-
-    text-align:center;
 }
 
 
 /* =========================================================
-   27 — DATE VALUE
-   ========================================================= */
+   22. SUBMITTED HEADING
+========================================================= */
 
-.date-value{
-    padding:
-        2mm
-        5mm;
+.submit-heading{
 
-    border-radius:10mm;
+    width:100% !important;
+
+    margin:0 0 7mm !important;
+
+    padding:0 !important;
+
+    font-family:
+        Arial,
+        sans-serif !important;
+
+    font-size:13pt !important;
+
+    font-weight:800 !important;
+
+    font-style:italic !important;
+
+    line-height:1.2 !important;
+
+    color:#4c3bc0 !important;
+
+    white-space:normal !important;
+
+    overflow-wrap:break-word !important;
+
+    word-break:normal !important;
+
+    position:relative;
+}
+
+
+/* heading underline */
+
+.submit-heading::after{
+
+    content:"";
+
+    display:block;
+
+    width:22mm;
+
+    height:.8mm;
+
+    margin-top:2mm;
+
+    border-radius:10px;
 
     background:
         linear-gradient(
             90deg,
-            #eef2ff,
-            #f5f3ff
+            #6753ff,
+            #8c56ff
         );
+}
 
-    color:#252a3a;
 
-    font-weight:600;
+/* =========================================================
+   23. SUBMITTED INFORMATION
+========================================================= */
+
+.submit-info{
+
+    width:100% !important;
+
+    margin:0 !important;
+
+    padding:0 !important;
+
+    font-family:
+        "Times New Roman",
+        serif !important;
+
+    font-size:12.5pt !important;
+
+    font-weight:400 !important;
+
+    line-height:1.35 !important;
+
+    color:#273733 !important;
+
+    white-space:normal !important;
+
+    overflow-wrap:anywhere !important;
+
+    word-break:normal !important;
+}
+
+
+.submit-info span{
+
+    display:inline !important;
+}
+
+
+/* =========================================================
+   24. OLD DIVIDER
+========================================================= */
+
+.vertical-line{
+
+    display:none !important;
+}
+
+
+/* =========================================================
+   25. DATE AREA
+========================================================= */
+
+.date-area{
+
+    width:100% !important;
+
+    margin-top:auto !important;
+
+    padding-top:4mm !important;
+
+    text-align:center !important;
+
+    font-family:
+        "Roboto Condensed",
+        Arial,
+        sans-serif !important;
+
+    font-size:12.5pt !important;
+
+    font-weight:700 !important;
+
+    line-height:1.3 !important;
+
+    color:#493a9c !important;
+
+    white-space:normal !important;
+
+    position:relative;
+}
+
+
+/* =========================================================
+   26. DATE VALUE
+========================================================= */
+
+.date-value{
+
+    display:inline-block !important;
+
+    margin-left:5mm !important;
+
+    padding:2mm 5mm !important;
+
+    border:none !important;
+
+    border-radius:10mm !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(104,83,255,.08),
+            rgba(38,168,137,.08)
+        ) !important;
 
     box-shadow:
-        inset 0 0 0 .4mm
-        rgba(124,58,237,.15);
+        inset 0 0 0 .3mm rgba(83,70,177,.18) !important;
+
+    font-family:
+        "Hind Siliguri",
+        sans-serif !important;
+
+    font-size:13pt !important;
+
+    font-weight:600 !important;
+
+    color:#37306e !important;
+
+    white-space:nowrap !important;
 }
 
 
 /* =========================================================
-   28 — BENGALI MODE
-   ========================================================= */
+   27. FOOTER
+========================================================= */
+
+.brand-footer{
+
+    display:none !important;
+}
+
+
+/* =========================================================
+   28. BANGLA MODE
+========================================================= */
 
 .page.lang-bn{
+
     font-family:
         "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
+        sans-serif !important;
 }
 
 
-/* =========================================================
-   29 — BENGALI COLLEGE NAME
-   ========================================================= */
+/* College */
 
 .page.lang-bn .college-name{
+
+    display:block !important;
+
     font-family:
         "Hind Siliguri",
-        sans-serif;
+        sans-serif !important;
 
-    font-size:18pt;
+    font-size:24pt !important;
 
-    letter-spacing:0;
+    font-weight:800 !important;
 
-    text-transform:none;
+    line-height:1.35 !important;
+
+    letter-spacing:0 !important;
+
+    color:#143f35 !important;
+
+    -webkit-text-fill-color:#143f35 !important;
 }
 
 
-/* =========================================================
-   30 — BENGALI DEPARTMENT
-   ========================================================= */
+/* Department */
 
 .page.lang-bn .department{
+
     font-family:
         "Hind Siliguri",
-        sans-serif;
+        sans-serif !important;
 
-    font-size:12.5pt;
+    font-size:20pt !important;
 
-    letter-spacing:0;
+    font-weight:800 !important;
+
+    line-height:1.35 !important;
+
+    letter-spacing:0 !important;
+
+    color:#4d3ac8 !important;
+
+    -webkit-text-fill-color:#4d3ac8 !important;
 }
 
 
-/* =========================================================
-   31 — BENGALI ASSIGNMENT
-   ========================================================= */
+/* Assignment */
 
 .page.lang-bn .assignment-on{
+
     font-family:
         "Hind Siliguri",
-        sans-serif;
+        sans-serif !important;
 
-    font-size:14pt;
+    font-size:17pt !important;
 
-    letter-spacing:0;
+    font-weight:800 !important;
 
-    text-transform:none;
+    line-height:1.35 !important;
+
+    margin-bottom:2.5mm !important;
 }
 
 
-/* =========================================================
-   32 — BENGALI TOPIC
-   ========================================================= */
-
-.page.lang-bn .topic-label,
-.page.lang-bn .topic-text{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-}
-
+/* Topic */
 
 .page.lang-bn .topic-label{
-    font-size:12pt;
+
+    font-family:
+        "Hind Siliguri",
+        sans-serif !important;
+
+    font-size:15pt !important;
+
+    font-weight:600 !important;
+
+    line-height:8.5mm !important;
 }
 
 
 .page.lang-bn .topic-text{
-    font-size:12pt;
 
-    line-height:1.55;
+    font-family:
+        "Hind Siliguri",
+        sans-serif !important;
+
+    font-size:14pt !important;
+
+    line-height:8.5mm !important;
+
+    padding-top:.2mm !important;
 }
 
 
-/* =========================================================
-   33 — BENGALI COURSE
-   ========================================================= */
+/* Course */
 
 .page.lang-bn .course-area{
+
     font-family:
         "Hind Siliguri",
-        sans-serif;
+        sans-serif !important;
 
-    font-size:12pt;
+    font-size:14pt !important;
 
-    line-height:1.55;
+    line-height:1.55 !important;
 }
 
 
-/* =========================================================
-   34 — BENGALI SUBMITTED
-   ========================================================= */
+.page.lang-bn .course-area > div{
+
+    font-family:
+        "Hind Siliguri",
+        sans-serif !important;
+}
+
+
+/* Submitted headings */
 
 .page.lang-bn .submit-heading{
+
     font-family:
         "Hind Siliguri",
-        sans-serif;
+        sans-serif !important;
 
-    font-size:12.5pt;
+    font-size:15pt !important;
 
-    letter-spacing:0;
+    font-weight:700 !important;
+
+    font-style:italic !important;
+
+    line-height:1.35 !important;
+
+    margin-bottom:7mm !important;
 }
 
+
+/* Submitted info */
 
 .page.lang-bn .submit-info{
+
     font-family:
         "Hind Siliguri",
-        sans-serif;
+        sans-serif !important;
 
-    font-size:12pt;
+    font-size:13.5pt !important;
 
-    line-height:1.55;
+    line-height:1.55 !important;
 }
 
 
-/* =========================================================
-   35 — BENGALI DATE
-   ========================================================= */
+/* Date */
 
 .page.lang-bn .date-area{
+
     font-family:
         "Hind Siliguri",
-        sans-serif;
+        sans-serif !important;
 
-    font-size:12pt;
+    font-size:14pt !important;
+
+    line-height:1.4 !important;
 }
 
 
 .page.lang-bn .date-value{
+
     font-family:
         "Hind Siliguri",
-        sans-serif;
+        sans-serif !important;
 
-    font-size:12pt;
+    font-size:14pt !important;
 }
 
 
 /* =========================================================
-   36 — MOBILE PREVIEW
-   ========================================================= */
+   29. MOBILE PREVIEW
+========================================================= */
 
 @media(max-width:520px){
 
     .page-content{
-        padding:
-            19mm
-            17mm
-            15mm;
+
+        left:15mm !important;
+        right:15mm !important;
+
+        top:16mm !important;
+        bottom:14mm !important;
     }
 
 
     .college-name{
-        font-size:18pt;
+
+        font-size:23pt !important;
     }
 
 
     .college-logo{
-        width:30mm;
-        height:30mm;
 
-        margin-top:7mm;
+        width:68mm !important;
+        height:68mm !important;
+
+        margin-top:4mm !important;
+        margin-bottom:3mm !important;
     }
 
 
     .department{
-        font-size:11pt;
 
-        padding:
-            2.2mm
-            6mm;
+        font-size:18pt !important;
     }
 
 
     .assignment-box{
+
+        margin-top:10mm !important;
+
         padding:
+            5.5mm
             6mm
-            5mm;
+            5mm !important;
     }
 
 
-    .topic-row{
-        gap:3mm;
-    }
+    .assignment-on{
 
-
-    .topic-label{
-        font-size:10.5pt;
-    }
-
-
-    .topic-text{
-        font-size:10.5pt;
-    }
-
-
-    .course-area{
-        font-size:10.5pt;
+        font-size:14.5pt !important;
     }
 
 
     .submitted-area{
-        gap:5mm;
+
+        margin-top:15mm !important;
+
+        column-gap:17mm !important;
 
         padding:
-            6mm
-            2mm;
+            4.5mm
+            0 !important;
     }
 
 
     .submit-heading{
-        font-size:10pt;
+
+        font-size:12.5pt !important;
+
+        margin-bottom:6mm !important;
     }
 
 
     .submit-info{
-        font-size:9.5pt;
 
-        line-height:1.5;
+        font-size:12pt !important;
+
+        line-height:1.35 !important;
     }
 
 
     .date-area{
-        margin-top:14mm;
 
-        font-size:9.5pt;
+        font-size:12pt !important;
     }
 
 
     .date-value{
-        padding:
-            1.8mm
-            4mm;
+
+        font-size:12.5pt !important;
+
+        margin-left:3mm !important;
+    }
+
+
+    /* Bangla mobile */
+
+    .page.lang-bn .college-name{
+
+        font-size:23pt !important;
+    }
+
+
+    .page.lang-bn .department{
+
+        font-size:19pt !important;
+    }
+
+
+    .page.lang-bn .assignment-on{
+
+        font-size:15.5pt !important;
+    }
+
+
+    .page.lang-bn .submit-heading{
+
+        font-size:13.5pt !important;
+    }
+
+
+    .page.lang-bn .submit-info{
+
+        font-size:12.5pt !important;
     }
 }
 
 
 /* =========================================================
-   37 — PRINT / PDF
-   ========================================================= */
+   30. SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px){
+
+    .college-name{
+
+        font-size:21pt !important;
+    }
+
+
+    .college-logo{
+
+        width:66mm !important;
+        height:66mm !important;
+    }
+
+
+    .department{
+
+        font-size:17pt !important;
+    }
+
+
+    .assignment-box{
+
+        margin-top:8mm !important;
+    }
+
+
+    .submitted-area{
+
+        margin-top:12mm !important;
+
+        column-gap:15mm !important;
+    }
+
+
+    .submit-heading{
+
+        font-size:11.5pt !important;
+    }
+
+
+    .submit-info{
+
+        font-size:11pt !important;
+    }
+
+
+    .date-area{
+
+        font-size:11pt !important;
+    }
+
+
+    .date-value{
+
+        font-size:11.5pt !important;
+    }
+}
+
+
+/* =========================================================
+   31. PRINT
+========================================================= */
 
 @media print{
 
     .page{
+
+        width:210mm !important;
+        height:297mm !important;
+
         box-shadow:none !important;
 
-        print-color-adjust:exact;
-        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact !important;
+        -webkit-print-color-adjust:exact !important;
     }
 
 
     .page::before,
-    .page::after,
-    .page-content::before,
-    .page-content::after{
+    .page::after{
 
-        print-color-adjust:exact;
-        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact !important;
+        -webkit-print-color-adjust:exact !important;
+    }
+
+
+    .page-border{
+
+        display:none !important;
     }
 }
