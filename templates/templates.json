@@ -3,19 +3,29 @@
         "id": "template-01",
         "name": "Classic Green",
         "nameBn": "ক্লাসিক গ্রিন",
+
         "description": "Original Design",
         "descriptionBn": "মূল ডিজাইন",
-        "preview": "template-01.jpg",
-        "css": "template-01.css"
-    },
 
-    {
-        "id": "template-02",
-        "name": "Elegant Blue",
-        "nameBn": "এলিগ্যান্ট ব্লু",
-        "description": "Modern Blue Design",
-        "descriptionBn": "আধুনিক নীল ডিজাইন",
-        "preview": "template-02.jpg",
-        "css": "template-02.css"
+        "preview": "template-01.jpg",
+        "css": "template-01.css",
+
+        "college": {
+            "en": "GOVT. DEBENDRA COLLEGE",
+            "bn": "সরকারি দেবেন্দ্র কলেজ"
+        },
+
+        "department": {
+            "en": "DEPARTMENT OF ISLAMIC STUDIES",
+            "bn": "ইসলামী স্টাডিজ বিভাগ"
+        },
+
+        "assignment": {
+            "en": "ASSIGNMENT ON",
+            "bn": "অ্যাসাইনমেন্ট"
+        },
+
+        "logo": "university.png",
+        "border": "border.png"
     }
 ]
