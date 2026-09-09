@@ -1021,23 +1021,73 @@
 
 
 /* =========================================================
-   22. PRINT / PDF
+   TEMPLATE 02 — EXPORT SHAPE FIX
+   College / Department এর নিচের unwanted shape remove
+========================================================= */
+
+.page[data-template="template-02"] .college-name::before,
+.page[data-template="template-02"] .college-name::after,
+.page[data-template="template-02"] .department::before,
+.page[data-template="template-02"] .department::after{
+    content:none !important;
+    display:none !important;
+
+    width:0 !important;
+    height:0 !important;
+
+    background:none !important;
+    border:none !important;
+    box-shadow:none !important;
+
+    position:static !important;
+}
+
+
+/* College name-এর কোনো background shape থাকলে remove */
+
+.page[data-template="template-02"] .college-name{
+    position:relative;
+
+    background-color:transparent !important;
+
+    box-shadow:none !important;
+
+    border:none !important;
+}
+
+
+/* Department-এর কোনো background shape থাকলে remove */
+
+.page[data-template="template-02"] .department{
+    position:relative;
+
+    background-color:transparent !important;
+
+    box-shadow:none !important;
+
+    border:none !important;
+}
+
+
+/* =========================================================
+   EXPORT / PRINT FIX
 ========================================================= */
 
 @media print{
 
-    .page[data-template="template-02"]{
-        width:210mm;
-        height:297mm;
-
-        background:#ffffff;
-
-        box-shadow:none;
-
-        overflow:hidden;
+    .page[data-template="template-02"] .college-name::before,
+    .page[data-template="template-02"] .college-name::after,
+    .page[data-template="template-02"] .department::before,
+    .page[data-template="template-02"] .department::after{
+        content:none !important;
+        display:none !important;
+        visibility:hidden !important;
     }
 
-    .page[data-template="template-02"] .page-border{
-        display:none !important;
+    .page[data-template="template-02"] .college-name,
+    .page[data-template="template-02"] .department{
+        background-color:transparent !important;
+        border:none !important;
+        box-shadow:none !important;
     }
 }
