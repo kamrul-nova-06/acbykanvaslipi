@@ -1,863 +1,434 @@
 /* =========================================================
    TEMPLATE 01
-   CLASSIC GREEN — BORDER ASSET VERSION
+   CLASSIC A4 ASSIGNMENT COVER
+   Uses: university.png + border.png
    ========================================================= */
 
+.template-01 {
+    --green: #073f2f;
+    --green-light: #0c6249;
+    --text: #18201d;
+    --purple: #33209b;
 
-/* =========================================================
-   01. A4 PAGE
-   ========================================================= */
-
-.page{
-    position:relative;
-
-    width:210mm;
-    height:297mm;
-
-    margin:0;
-    padding:0;
-
-    background:#ffffff;
-
-    overflow:hidden;
-
-    color:#123c32;
-
-    box-sizing:border-box;
-
-    transform-origin:top left;
-}
-
-
-/* =========================================================
-   02. BORDER ASSET
-   Uses:
-   ../assets/border.png
-
-   JS loads the actual image.
-   ========================================================= */
-
-.page-border{
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:fill;
-
-    z-index:1;
-
-    opacity:1 !important;
-
-    pointer-events:none;
-}
-
-
-/* =========================================================
-   03. CONTENT AREA
-   ========================================================= */
-
-.page-content{
-    position:absolute;
-
-    top:18mm;
-    left:17mm;
-    right:17mm;
-    bottom:15mm;
-
-    z-index:2;
-
-    width:auto;
-
-    display:flex;
-    flex-direction:column;
-
-    min-width:0;
-
-    box-sizing:border-box;
-}
-
-
-/* =========================================================
-   04. COLLEGE NAME
-   ========================================================= */
-
-.college-name{
-    width:100%;
-
-    margin:0;
-    padding:0 3mm;
-
-    text-align:center;
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 
     font-family:
-        "Playfair Display",
         Georgia,
-        serif;
-
-    font-size:22pt;
-
-    font-weight:700;
-
-    line-height:1.2;
-
-    letter-spacing:.2px;
-
-    color:#07503d;
-
-    white-space:normal;
-
-    overflow-wrap:break-word;
-
-    word-break:normal;
-}
-
-
-/* =========================================================
-   05. COLLEGE LOGO
-   ========================================================= */
-
-.college-logo{
-    display:block;
-
-    width:43mm;
-    height:43mm;
-
-    margin:6mm auto 5mm;
-
-    object-fit:contain;
-
-    flex:none;
-}
-
-
-/* =========================================================
-   06. DEPARTMENT
-   ========================================================= */
-
-.department{
-    width:100%;
-
-    margin:0;
-    padding:0 2mm;
-
-    text-align:center;
-
-    font-family:
-        "Roboto Condensed",
-        Arial,
-        sans-serif;
-
-    font-size:17pt;
-
-    font-weight:700;
-
-    line-height:1.25;
-
-    letter-spacing:.2px;
-
-    color:#08753f;
-
-    white-space:normal;
-
-    overflow-wrap:break-word;
-
-    word-break:normal;
-}
-
-
-/* =========================================================
-   07. ASSIGNMENT SECTION
-   ========================================================= */
-
-.assignment-box{
-    width:100%;
-
-    margin-top:11mm;
-
-    padding:4mm 0 4.5mm;
-
-    flex:none;
-
-    overflow:hidden;
-
-    border-top:
-        .45mm solid #07503d;
-
-    border-bottom:
-        .45mm solid #07503d;
-
-    position:relative;
-}
-
-
-/* small decorative line */
-
-.assignment-box::before{
-    content:"";
-
-    position:absolute;
-
-    top:-1.5mm;
-    left:50%;
-
-    width:22mm;
-    height:3mm;
-
-    transform:
-        translateX(-50%);
-
-    background:#ffffff;
-
-    z-index:1;
-}
-
-
-/* =========================================================
-   08. ASSIGNMENT TITLE
-   ========================================================= */
-
-.assignment-on{
-    position:relative;
-
-    z-index:2;
-
-    width:100%;
-
-    margin:0 0 3mm;
-    padding:0;
-
-    text-align:center;
-
-    font-family:
-        "Roboto Condensed",
-        Arial,
-        sans-serif;
-
-    font-size:14.5pt;
-
-    font-weight:700;
-
-    line-height:1.25;
-
-    color:#123c32;
-
-    white-space:normal;
-}
-
-
-/* =========================================================
-   09. TOPIC ROW
-   ========================================================= */
-
-.topic-row{
-    width:100%;
-
-    min-width:0;
-
-    display:grid;
-
-    grid-template-columns:
-        auto minmax(0,1fr);
-
-    column-gap:3mm;
-
-    align-items:start;
-}
-
-
-/* =========================================================
-   10. TOPIC LABEL
-   ========================================================= */
-
-.topic-label{
-    min-width:max-content;
-
-    white-space:nowrap;
-
-    font-family:
         "Times New Roman",
+        "Noto Serif Bengali",
         serif;
 
-    font-size:12.5pt;
-
-    font-weight:700;
-
-    line-height:8mm;
-
-    color:#123c32;
+    color: var(--text);
 }
 
+/* ---------------------------------------------------------
+   A4 INNER CONTENT
+   --------------------------------------------------------- */
 
-/* =========================================================
-   11. TOPIC WRITING AREA
-   ========================================================= */
-
-.topic-writing-area{
-    position:relative;
-
-    width:100%;
-
-    min-width:0;
-
-    height:17mm;
-
-    overflow:hidden;
-
-    box-sizing:border-box;
+.template-01 .page-content {
+    position: absolute;
+    inset: 17mm 18mm 16mm 18mm;
+    z-index: 5;
+    box-sizing: border-box;
 }
 
+/* ---------------------------------------------------------
+   BORDER IMAGE
+   --------------------------------------------------------- */
 
-/* dotted line 01 */
-
-.topic-writing-area::before{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    right:0;
-
-    top:8mm;
-
-    height:1px;
-
-    background-image:
-        radial-gradient(
-            circle,
-            #55766c .65px,
-            transparent .95px
-        );
-
-    background-size:4px 1px;
-
-    background-repeat:repeat-x;
-
-    z-index:1;
-
-    pointer-events:none;
+.template-01 .page-border {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 1;
+    pointer-events: none;
 }
 
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
 
-/* dotted line 02 */
+.template-01 .college-name {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 4mm;
+    line-height: 1.15;
+    font-weight: 700;
+    color: var(--green);
 
-.topic-writing-area::after{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    right:0;
-
-    top:16mm;
-
-    height:1px;
-
-    background-image:
-        radial-gradient(
-            circle,
-            #55766c .65px,
-            transparent .95px
-        );
-
-    background-size:4px 1px;
-
-    background-repeat:repeat-x;
-
-    z-index:1;
-
-    pointer-events:none;
+    font-size: 25px;
+    letter-spacing: 0.5px;
 }
 
-
-/* =========================================================
-   12. TOPIC TEXT
-   ========================================================= */
-
-.topic-text{
-    position:relative;
-
-    z-index:3;
-
-    width:100%;
-    height:17mm;
-
-    margin:0;
-    padding:0;
-
-    background:transparent;
-
-    color:#222;
-
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:12.5pt;
-
-    font-weight:400;
-
-    line-height:8mm;
-
-    white-space:pre-wrap;
-
-    overflow:hidden;
-
-    overflow-wrap:anywhere;
-
-    word-break:normal;
-
-    text-align:left;
+/* Fixed English name */
+.template-01 .college-name::before {
+    content: "GOVT. DEBENDRA COLLEGE";
+    display: block;
 }
 
+/* Fixed Bangla name */
+.template-01 .college-name::after {
+    content: "সরকারি দেবেন্দ্র কলেজ";
+    display: block;
 
-/* =========================================================
-   13. COURSE AREA
-   ========================================================= */
-
-.course-area{
-    width:100%;
-
-    min-width:0;
-
-    margin-top:2mm;
-
-    padding:2mm 4mm;
-
-    text-align:center;
-
-    font-family:
-        "Times New Roman",
-        serif;
-
-    font-size:12.5pt;
-
-    font-weight:500;
-
-    line-height:1.45;
-
-    color:#222;
-
-    overflow:hidden;
-
-    box-sizing:border-box;
+    margin-top: 2px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
-
-/* course rows */
-
-.course-area > div{
-    width:100%;
-
-    margin:0;
-    padding:0;
-
-    white-space:normal;
-
-    overflow-wrap:anywhere;
-
-    word-break:normal;
+/* Hide duplicate dynamic college text if renderer outputs it */
+.template-01 .college-name > * {
+    display: none;
 }
 
+/* ---------------------------------------------------------
+   UNIVERSITY / COLLEGE LOGO
+   --------------------------------------------------------- */
 
-/* course labels */
+.template-01 .college-logo {
+    width: 88px;
+    height: 88px;
 
-#courseNameLabel,
-#courseCodeLabel{
-    font-weight:700;
+    margin: 7mm auto 4mm;
 
-    color:#123c32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 10;
 }
 
+.template-01 .college-logo img {
+    width: 88px;
+    height: 88px;
 
-/* =========================================================
-   14. SUBMITTED AREA
-   ========================================================= */
-
-.submitted-area{
-    position:relative;
-
-    width:100%;
-
-    min-width:0;
-
-    margin-top:27mm;
-
-    display:grid;
-
-    grid-template-columns:
-        minmax(0,1fr)
-        minmax(0,1fr);
-
-    column-gap:16mm;
-
-    flex:none;
+    object-fit: contain;
+    display: block;
 }
 
+/* ---------------------------------------------------------
+   DEPARTMENT
+   --------------------------------------------------------- */
 
-/* =========================================================
-   15. CENTER DOUBLE DIVIDER
-   ========================================================= */
+.template-01 .department {
+    width: 100%;
+    text-align: center;
 
-.submitted-area::before,
-.submitted-area::after{
-    content:"";
+    margin-top: 3mm;
 
-    position:absolute;
+    font-size: 20px;
+    line-height: 1.2;
 
-    top:-3mm;
-    bottom:0;
-
-    width:.35mm;
-
-    background:#6a8078;
-
-    z-index:2;
-
-    pointer-events:none;
+    font-weight: 700;
+    color: var(--green);
 }
 
-
-.submitted-area::before{
-    left:calc(50% - 1.8mm);
+/* Fixed department text */
+.template-01 .department::before {
+    content: "DEPARTMENT OF ISLAMIC STUDIES";
+    display: block;
 }
 
+.template-01 .department::after {
+    content: "ইসলামিক স্টাডিজ বিভাগ";
+    display: block;
 
-.submitted-area::after{
-    left:calc(50% + 1.8mm);
+    margin-top: 2px;
+
+    font-size: 14px;
+    font-weight: 600;
 }
 
+/* ---------------------------------------------------------
+   ASSIGNMENT AREA
+   --------------------------------------------------------- */
 
-/* hide old divider */
+.template-01 .assignment-box {
+    margin-top: 8mm;
 
-.vertical-line{
-    display:none !important;
+    width: 100%;
+
+    border-top: 1.4px solid var(--green);
+    border-bottom: 1.4px solid var(--green);
+
+    padding: 5mm 5mm 5mm;
+
+    box-sizing: border-box;
 }
 
+/* ASSIGNMENT ON */
+.template-01 .assignment-on {
+    text-align: center;
 
-/* =========================================================
-   16. SUBMIT COLUMN
-   ========================================================= */
+    font-size: 17px;
+    font-weight: 800;
 
-.submit-column{
-    min-width:0;
+    color: #111;
 
-    overflow:hidden;
-
-    position:relative;
+    margin-bottom: 3mm;
 }
 
+.template-01 .assignment-on::before {
+    content: "ASSIGNMENT ON";
+    display: block;
+}
 
-/* =========================================================
-   17. SUBMITTED HEADING
-   ========================================================= */
+.template-01 .assignment-on::after {
+    content: "অ্যাসাইনমেন্ট";
+    display: block;
 
-.submit-heading{
-    width:100%;
+    font-size: 13px;
+    margin-top: 2px;
+}
 
-    margin:0 0 8mm;
+/* Hide duplicate */
+.template-01 .assignment-on > * {
+    display: none;
+}
 
-    padding:0;
+/* ---------------------------------------------------------
+   TOPIC
+   --------------------------------------------------------- */
+
+.template-01 .topic-row {
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+    min-height: 18mm;
+
+    margin-top: 2mm;
+}
+
+.template-01 .topic-label {
+    flex: 0 0 23mm;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    color: #111;
+}
+
+.template-01 .topic-label::before {
+    content: "TOPIC:";
+}
+
+.template-01 .topic-label > * {
+    display: none;
+}
+
+.template-01 .topic-writing-area {
+    flex: 1;
+    min-width: 0;
+}
+
+.template-01 .topic-text {
+    font-size: 14px;
+    line-height: 1.45;
+
+    min-height: 14mm;
+
+    border-bottom: 1px dotted #555;
+
+    padding: 0 0 2mm;
+
+    word-break: break-word;
+}
+
+/* ---------------------------------------------------------
+   COURSE
+   --------------------------------------------------------- */
+
+.template-01 .course-area {
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 4mm;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   SUBMITTED SECTION
+   --------------------------------------------------------- */
+
+.template-01 .submitted-area {
+    display: grid;
+
+    grid-template-columns: 1fr 1px 1fr;
+
+    column-gap: 10mm;
+
+    width: 100%;
+
+    margin-top: 18mm;
+
+    padding: 0 7mm;
+
+    box-sizing: border-box;
+}
+
+.template-01 .submit-column {
+    min-width: 0;
+}
+
+/* Vertical separator */
+.template-01 .vertical-line {
+    width: 1px;
+
+    background: #222;
+
+    min-height: 45mm;
+
+    position: relative;
+}
+
+.template-01 .vertical-line::after {
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+    top: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background: #222;
+}
+
+/* ---------------------------------------------------------
+   SUBMITTED HEADINGS
+   --------------------------------------------------------- */
+
+.template-01 .submit-heading {
+    display: block;
 
     font-family:
         Arial,
         sans-serif;
 
-    font-size:12.5pt;
+    font-size: 15px;
 
-    font-weight:700;
+    font-weight: 800;
 
-    font-style:italic;
+    font-style: italic;
 
-    line-height:1.25;
+    color: var(--purple);
 
-    letter-spacing:.3px;
+    margin-bottom: 6mm;
 
-    color:#08753f;
-
-    white-space:normal;
-
-    overflow-wrap:break-word;
-
-    word-break:normal;
+    position: relative;
 }
 
+.template-01 .submit-heading::after {
+    content: "";
 
-/* little underline */
+    display: block;
 
-.submit-heading::after{
-    content:"";
+    width: 30mm;
+    height: 1.5px;
 
-    display:block;
+    background: var(--purple);
 
-    width:17mm;
-
-    height:.6mm;
-
-    margin-top:2mm;
-
-    background:#08753f;
+    margin-top: 2mm;
 }
 
+/* ---------------------------------------------------------
+   SUBMITTED INFORMATION
+   --------------------------------------------------------- */
 
-/* =========================================================
-   18. SUBMITTED INFORMATION
-   ========================================================= */
+.template-01 .submit-info {
+    font-size: 13.5px;
 
-.submit-info{
-    width:100%;
+    line-height: 1.45;
 
-    margin:0;
-    padding:0;
+    color: #222;
 
-    font-family:
-        "Times New Roman",
-        serif;
-
-    font-size:12.5pt;
-
-    font-weight:400;
-
-    line-height:1.35;
-
-    color:#222;
-
-    white-space:normal;
-
-    overflow-wrap:anywhere;
-
-    word-break:normal;
+    word-break: break-word;
 }
 
+/* ---------------------------------------------------------
+   DATE
+   --------------------------------------------------------- */
 
-.submit-info span{
-    display:inline;
+.template-01 .date-area {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 3mm;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #333;
 }
 
+.template-01 .date-value {
+    margin-left: 5mm;
 
-/* =========================================================
-   19. DATE
-   ========================================================= */
-
-.date-area{
-    width:100%;
-
-    margin-top:auto;
-
-    padding-top:3mm;
-
-    text-align:center;
-
-    font-family:
-        "Roboto Condensed",
-        Arial,
-        sans-serif;
-
-    font-size:12.5pt;
-
-    font-weight:600;
-
-    line-height:1.35;
-
-    color:#354d45;
-
-    white-space:normal;
+    font-weight: 500;
 }
 
+/* ---------------------------------------------------------
+   IMAGE SAFETY
+   --------------------------------------------------------- */
 
-/* date value */
-
-.date-value{
-    display:inline-block;
-
-    margin-left:5mm;
-
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:12.5pt;
-
-    font-weight:600;
-
-    color:#222;
-
-    white-space:nowrap;
+.template-01 img {
+    max-width: 100%;
 }
 
+/* ---------------------------------------------------------
+   PRINT
+   --------------------------------------------------------- */
 
-/* =========================================================
-   20. BANGLA MODE
-   ========================================================= */
+@media print {
 
-.page.lang-bn{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-}
+    .template-01 {
+        width: 210mm;
+        height: 297mm;
 
+        margin: 0;
 
-/* College */
+        box-shadow: none;
 
-.page.lang-bn .college-name{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:24pt;
-
-    font-weight:700;
-
-    line-height:1.35;
-
-    letter-spacing:0;
-
-    padding:0 2mm;
-}
-
-
-/* Department */
-
-.page.lang-bn .department{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:19pt;
-
-    font-weight:700;
-
-    line-height:1.35;
-
-    letter-spacing:0;
-
-    padding:0 2mm;
-}
-
-
-/* Assignment */
-
-.page.lang-bn .assignment-on{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:16pt;
-
-    font-weight:700;
-
-    line-height:1.35;
-}
-
-
-/* Topic label */
-
-.page.lang-bn .topic-label{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:13.5pt;
-
-    font-weight:600;
-
-    line-height:8mm;
-}
-
-
-/* Topic */
-
-.page.lang-bn .topic-text{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:13pt;
-
-    line-height:8mm;
-}
-
-
-/* Course */
-
-.page.lang-bn .course-area{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:13pt;
-
-    line-height:1.55;
-}
-
-
-/* Submitted heading */
-
-.page.lang-bn .submit-heading{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:14pt;
-
-    line-height:1.35;
-}
-
-
-/* Submitted info */
-
-.page.lang-bn .submit-info{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:13pt;
-
-    line-height:1.55;
-}
-
-
-/* Date */
-
-.page.lang-bn .date-area{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:14pt;
-
-    line-height:1.4;
-}
-
-
-.page.lang-bn .date-value{
-    font-family:
-        "Hind Siliguri",
-        sans-serif;
-
-    font-size:14pt;
-
-    font-weight:600;
-}
-
-
-/* =========================================================
-   21. SMALL SCREEN SAFETY
-   A4 itself remains A4.
-   Preview scaling is handled by GDCV2.
-   ========================================================= */
-
-@media(max-width:520px){
-
-    .page-content{
-        top:18mm;
-        left:17mm;
-        right:17mm;
-        bottom:15mm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
+    .template-01 .page-border {
+        display: block !important;
+    }
+}
+
+/* ---------------------------------------------------------
+   MOBILE PREVIEW
+   --------------------------------------------------------- */
+
+@media screen and (max-width: 700px) {
+
+    .template-01 {
+        width: 210mm;
+        height: 297mm;
+
+        transform-origin: top left;
+    }
 }
