@@ -1,23 +1,26 @@
-{
-  "templates": [
+[
     {
-      "id": "template-01",
-      "name": "Classic Green",
-      "nameBn": "ক্লাসিক গ্রিন",
-      "description": "Original Design",
-      "descriptionBn": "মূল ডিজাইন",
-      "preview": "template-01.jpg",
-      "css": "template-01.css"
+        "id": "template-01",
+        "css": "template-01.css",
+        "preview": "template-01.jpg",
+
+        "university": "assets/university.png",
+        "border": "assets/border.png",
+
+        "name": "Classic Green",
+        "nameBn": "ক্লাসিক গ্রিন",
+        "description": "Original Design",
+        "descriptionBn": "মূল ডিজাইন"
     },
 
     {
-      "id": "template-02",
-      "name": "Elegant Border",
-      "nameBn": "এলিগ্যান্ট বর্ডার",
-      "description": "Modern Assignment Cover",
-      "descriptionBn": "আধুনিক অ্যাসাইনমেন্ট কভার",
-      "preview": "template-02.jpg",
-      "css": "template-02.css"
+        "id": "template-02",
+        "css": "template-02.css",
+        "preview": "template-02.jpg",
+
+        "name": "Modern",
+        "nameBn": "মডার্ন",
+        "description": "Modern Assignment Cover",
+        "descriptionBn": "আধুনিক অ্যাসাইনমেন্ট কভার"
     }
-  ]
-}
+]
