@@ -3,6 +3,7 @@
    MODERN COLORFUL A4 ASSIGNMENT COVER
    WHITE BACKGROUND
    NO BORDER ASSET
+   EXPORT SAFE VERSION
 ========================================================= */
 
 
@@ -34,72 +35,12 @@
 
 .page[data-template="template-02"] .page-border{
     display:none !important;
+    visibility:hidden !important;
 }
 
 
 /* =========================================================
-   03. COLORFUL DECORATIVE SHAPES
-   CSS ONLY — NO IMAGE ASSET
-========================================================= */
-
-
-/* TOP LEFT LARGE CURVE */
-
-.page[data-template="template-02"]::before{
-    content:"";
-
-    position:absolute;
-
-    width:72mm;
-    height:72mm;
-
-    top:-39mm;
-    left:-39mm;
-
-    border-radius:50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #6c4cff 0%,
-            #8b5cf6 45%,
-            #b06cff 100%
-        );
-
-    z-index:0;
-}
-
-
-/* TOP RIGHT CIRCLE */
-
-.page[data-template="template-02"]::after{
-    content:"";
-
-    position:absolute;
-
-    width:43mm;
-    height:43mm;
-
-    top:-18mm;
-    right:-17mm;
-
-    border-radius:50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #19b5a5,
-            #39d98a
-        );
-
-    opacity:.95;
-
-    z-index:0;
-}
-
-
-/* =========================================================
-   04. EXTRA SHAPES USING PAGE CONTENT
+   03. PAGE CONTENT
 ========================================================= */
 
 .page[data-template="template-02"] .page-content{
@@ -124,7 +65,60 @@
 }
 
 
-/* Decorative soft glow behind page */
+/* =========================================================
+   04. DECORATIVE TOP LEFT SHAPE
+   CSS ONLY
+========================================================= */
+
+.page[data-template="template-02"]::before{
+    content:"";
+
+    position:absolute;
+
+    width:72mm;
+    height:72mm;
+
+    top:-39mm;
+    left:-39mm;
+
+    border-radius:50%;
+
+    background:#7c4dff;
+
+    z-index:0;
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   05. DECORATIVE TOP RIGHT SHAPE
+========================================================= */
+
+.page[data-template="template-02"]::after{
+    content:"";
+
+    position:absolute;
+
+    width:43mm;
+    height:43mm;
+
+    top:-18mm;
+    right:-17mm;
+
+    border-radius:50%;
+
+    background:#20b89f;
+
+    z-index:0;
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   06. SOFT BOTTOM DECORATION
+========================================================= */
 
 .page[data-template="template-02"] .page-content::before{
     content:"";
@@ -139,13 +133,9 @@
 
     border-radius:50%;
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(108,76,255,.16) 0%,
-            rgba(108,76,255,.08) 45%,
-            transparent 72%
-        );
+    background:#f2efff;
+
+    opacity:.75;
 
     pointer-events:none;
 
@@ -154,10 +144,17 @@
 
 
 /* =========================================================
-   05. COLLEGE NAME
+   07. COLLEGE NAME
+   IMPORTANT:
+   NO BACKGROUND IMAGE
+   NO GRADIENT
+   EXPORT SAFE
 ========================================================= */
 
 .page[data-template="template-02"] .college-name{
+
+    position:relative;
+
     width:100%;
 
     margin:1mm 0 0;
@@ -175,20 +172,21 @@
 
     letter-spacing:.2px;
 
-    color:#172554;
+    color:#3f3b91 !important;
 
-    background:
-        linear-gradient(
-            90deg,
-            #243b8f 0%,
-            #6d4aff 48%,
-            #159f91 100%
-        );
+    /* VERY IMPORTANT */
+    background:none !important;
+    background-color:transparent !important;
+    background-image:none !important;
 
-    -webkit-background-clip:text;
-    background-clip:text;
+    -webkit-background-clip:initial !important;
+    background-clip:initial !important;
 
-    -webkit-text-fill-color:transparent;
+    -webkit-text-fill-color:#3f3b91 !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
 
     white-space:normal;
 
@@ -196,11 +194,37 @@
 }
 
 
+/* Remove ALL pseudo elements */
+
+.page[data-template="template-02"] .college-name::before,
+.page[data-template="template-02"] .college-name::after{
+
+    content:none !important;
+
+    display:none !important;
+
+    visibility:hidden !important;
+
+    position:static !important;
+
+    width:0 !important;
+    height:0 !important;
+
+    background:none !important;
+    background-image:none !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+}
+
+
 /* =========================================================
-   06. LOGO
+   08. COLLEGE LOGO
 ========================================================= */
 
 .page[data-template="template-02"] .college-logo{
+
     display:block;
 
     width:73mm;
@@ -212,6 +236,12 @@
 
     flex:none;
 
+    background:transparent !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+
     filter:
         drop-shadow(
             0 3px 4px rgba(58,47,130,.14)
@@ -220,10 +250,14 @@
 
 
 /* =========================================================
-   07. DEPARTMENT
+   09. DEPARTMENT
+   EXPORT SAFE
 ========================================================= */
 
 .page[data-template="template-02"] .department{
+
+    position:relative;
+
     width:100%;
 
     margin:0;
@@ -239,20 +273,21 @@
 
     line-height:1.2;
 
-    color:#087f6b;
+    color:#087f6b !important;
 
-    background:
-        linear-gradient(
-            90deg,
-            #087f6b 0%,
-            #16a085 50%,
-            #087f6b 100%
-        );
+    /* VERY IMPORTANT */
+    background:none !important;
+    background-color:transparent !important;
+    background-image:none !important;
 
-    -webkit-background-clip:text;
-    background-clip:text;
+    -webkit-background-clip:initial !important;
+    background-clip:initial !important;
 
-    -webkit-text-fill-color:transparent;
+    -webkit-text-fill-color:#087f6b !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
 
     white-space:normal;
 
@@ -260,11 +295,37 @@
 }
 
 
+/* Remove ALL pseudo elements */
+
+.page[data-template="template-02"] .department::before,
+.page[data-template="template-02"] .department::after{
+
+    content:none !important;
+
+    display:none !important;
+
+    visibility:hidden !important;
+
+    position:static !important;
+
+    width:0 !important;
+    height:0 !important;
+
+    background:none !important;
+    background-image:none !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+}
+
+
 /* =========================================================
-   08. ASSIGNMENT SECTION
+   10. ASSIGNMENT BOX
 ========================================================= */
 
 .page[data-template="template-02"] .assignment-box{
+
     position:relative;
 
     width:100%;
@@ -296,9 +357,12 @@
 }
 
 
-/* Colored top accent */
+/* =========================================================
+   11. ASSIGNMENT BOX TOP ACCENT
+========================================================= */
 
 .page[data-template="template-02"] .assignment-box::before{
+
     content:"";
 
     position:absolute;
@@ -318,12 +382,17 @@
             #a855f7,
             #18a999
         );
+
+    z-index:1;
 }
 
 
-/* Small decorative circle */
+/* =========================================================
+   12. ASSIGNMENT BOX CORNER CIRCLE
+========================================================= */
 
 .page[data-template="template-02"] .assignment-box::after{
+
     content:"";
 
     position:absolute;
@@ -336,20 +405,20 @@
 
     border-radius:50%;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(108,76,255,.12),
-            rgba(24,169,153,.10)
-        );
+    background:#eef2ff;
+
+    opacity:.9;
+
+    z-index:1;
 }
 
 
 /* =========================================================
-   09. ASSIGNMENT ON
+   13. ASSIGNMENT ON
 ========================================================= */
 
 .page[data-template="template-02"] .assignment-on{
+
     position:relative;
 
     width:100%;
@@ -377,10 +446,11 @@
 
 
 /* =========================================================
-   10. TOPIC ROW
+   14. TOPIC ROW
 ========================================================= */
 
 .page[data-template="template-02"] .topic-row{
+
     width:100%;
 
     min-width:0;
@@ -395,9 +465,12 @@
 }
 
 
-/* TOPIC LABEL */
+/* =========================================================
+   15. TOPIC LABEL
+========================================================= */
 
 .page[data-template="template-02"] .topic-label{
+
     min-width:max-content;
 
     padding-top:.3mm;
@@ -417,10 +490,11 @@
 
 
 /* =========================================================
-   11. TOPIC WRITING
+   16. TOPIC WRITING AREA
 ========================================================= */
 
 .page[data-template="template-02"] .topic-writing-area{
+
     position:relative;
 
     width:100%;
@@ -435,10 +509,13 @@
 }
 
 
-/* First writing line */
+/* =========================================================
+   17. TOPIC LINE 01
+========================================================= */
 
 .page[data-template="template-02"]
 .topic-writing-area::before{
+
     content:"";
 
     position:absolute;
@@ -453,8 +530,8 @@
     background:
         repeating-linear-gradient(
             90deg,
-            #a9a5c9 0,
-            #a9a5c9 1.2px,
+            #aaa6c9 0,
+            #aaa6c9 1.2px,
             transparent 1.2px,
             transparent 3.5px
         );
@@ -465,10 +542,13 @@
 }
 
 
-/* Second writing line */
+/* =========================================================
+   18. TOPIC LINE 02
+========================================================= */
 
 .page[data-template="template-02"]
 .topic-writing-area::after{
+
     content:"";
 
     position:absolute;
@@ -483,8 +563,8 @@
     background:
         repeating-linear-gradient(
             90deg,
-            #a9a5c9 0,
-            #a9a5c9 1.2px,
+            #aaa6c9 0,
+            #aaa6c9 1.2px,
             transparent 1.2px,
             transparent 3.5px
         );
@@ -495,9 +575,12 @@
 }
 
 
-/* Topic text */
+/* =========================================================
+   19. TOPIC TEXT
+========================================================= */
 
 .page[data-template="template-02"] .topic-text{
+
     position:relative;
 
     z-index:3;
@@ -510,7 +593,7 @@
 
     padding:0;
 
-    background:transparent;
+    background:transparent !important;
 
     color:#34343d;
 
@@ -533,10 +616,11 @@
 
 
 /* =========================================================
-   12. COURSE AREA
+   20. COURSE AREA
 ========================================================= */
 
 .page[data-template="template-02"] .course-area{
+
     width:100%;
 
     min-width:0;
@@ -560,6 +644,7 @@
 
 
 .page[data-template="template-02"] .course-area > div{
+
     width:100%;
 
     margin:0;
@@ -575,9 +660,13 @@
 
 .page[data-template="template-02"] #courseNameLabel,
 .page[data-template="template-02"] #courseCodeLabel{
+
     color:#5a469d;
 
     font-weight:700;
+
+    background:none !important;
+    background-image:none !important;
 }
 
 
@@ -585,17 +674,22 @@
 
 .page[data-template="template-02"] #previewCourseName,
 .page[data-template="template-02"] #previewCourseCode{
+
     color:#29294b;
 
     font-weight:700;
+
+    background:none !important;
+    background-image:none !important;
 }
 
 
 /* =========================================================
-   13. SUBMITTED AREA
+   21. SUBMITTED AREA
 ========================================================= */
 
 .page[data-template="template-02"] .submitted-area{
+
     position:relative;
 
     width:100%;
@@ -617,7 +711,7 @@
 
 
 /* =========================================================
-   14. COLORFUL CENTER DIVIDER
+   22. CENTER DOUBLE DIVIDER
 ========================================================= */
 
 .page[data-template="template-02"]
@@ -652,21 +746,24 @@
 
 .page[data-template="template-02"]
 .submitted-area::before{
+
     left:calc(50% - 1.8mm);
 }
 
 
 .page[data-template="template-02"]
 .submitted-area::after{
+
     left:calc(50% + 1.8mm);
 }
 
 
 /* =========================================================
-   15. SUBMIT COLUMN
+   23. SUBMIT COLUMN
 ========================================================= */
 
 .page[data-template="template-02"] .submit-column{
+
     min-width:0;
 
     overflow:hidden;
@@ -675,27 +772,30 @@
 }
 
 
-/* LEFT COLUMN একটু ডান দিকে */
+/* Left */
 
 .page[data-template="template-02"]
 .submit-column:first-child{
+
     padding-left:5mm;
 }
 
 
-/* RIGHT COLUMN */
+/* Right */
 
 .page[data-template="template-02"]
 .submit-column:last-child{
+
     padding-left:2mm;
 }
 
 
 /* =========================================================
-   16. SUBMITTED HEADING
+   24. SUBMITTED HEADING
 ========================================================= */
 
 .page[data-template="template-02"] .submit-heading{
+
     position:relative;
 
     width:max-content;
@@ -721,13 +821,20 @@
     white-space:normal;
 
     overflow-wrap:break-word;
+
+    background:none !important;
+
+    background-image:none !important;
 }
 
 
-/* Underline */
+/* =========================================================
+   25. SUBMITTED HEADING UNDERLINE
+========================================================= */
 
 .page[data-template="template-02"]
 .submit-heading::after{
+
     content:"";
 
     position:absolute;
@@ -751,10 +858,11 @@
 
 
 /* =========================================================
-   17. SUBMITTED INFORMATION
+   26. SUBMITTED INFORMATION
 ========================================================= */
 
 .page[data-template="template-02"] .submit-info{
+
     width:100%;
 
     margin:0;
@@ -775,19 +883,25 @@
     overflow-wrap:anywhere;
 
     word-break:normal;
+
+    background:none !important;
+
+    background-image:none !important;
 }
 
 
 .page[data-template="template-02"] .submit-info span{
+
     display:inline;
 }
 
 
 /* =========================================================
-   18. DATE
+   27. DATE AREA
 ========================================================= */
 
 .page[data-template="template-02"] .date-area{
+
     width:100%;
 
     margin-top:auto;
@@ -807,12 +921,19 @@
     color:#51488a;
 
     white-space:normal;
+
+    background:none !important;
+
+    background-image:none !important;
 }
 
 
-/* Date pill */
+/* =========================================================
+   28. DATE PILL
+========================================================= */
 
 .page[data-template="template-02"] .date-value{
+
     display:inline-block;
 
     margin-left:5mm;
@@ -846,31 +967,54 @@
 
 
 /* =========================================================
-   19. BENGALI
+   29. BENGALI VERSION
 ========================================================= */
 
 .page[data-template="template-02"].lang-bn
 .college-name{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:24pt;
 
     line-height:1.35;
+
+    color:#3f3b91 !important;
+
+    background:none !important;
+    background-image:none !important;
+
+    -webkit-background-clip:initial !important;
+    background-clip:initial !important;
+
+    -webkit-text-fill-color:#3f3b91 !important;
 }
 
 
 .page[data-template="template-02"].lang-bn
 .department{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:20pt;
 
     line-height:1.35;
+
+    color:#087f6b !important;
+
+    background:none !important;
+    background-image:none !important;
+
+    -webkit-background-clip:initial !important;
+    background-clip:initial !important;
+
+    -webkit-text-fill-color:#087f6b !important;
 }
 
 
 .page[data-template="template-02"].lang-bn
 .assignment-on{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:16pt;
@@ -881,6 +1025,7 @@
 
 .page[data-template="template-02"].lang-bn
 .topic-label{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:14pt;
@@ -891,6 +1036,7 @@
 
 .page[data-template="template-02"].lang-bn
 .topic-text{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:13.5pt;
@@ -901,6 +1047,7 @@
 
 .page[data-template="template-02"].lang-bn
 .course-area{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:13.5pt;
@@ -911,6 +1058,7 @@
 
 .page[data-template="template-02"].lang-bn
 .submit-heading{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:14pt;
@@ -921,6 +1069,7 @@
 
 .page[data-template="template-02"].lang-bn
 .submit-info{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:13.5pt;
@@ -931,6 +1080,7 @@
 
 .page[data-template="template-02"].lang-bn
 .date-area{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:14pt;
@@ -939,6 +1089,7 @@
 
 .page[data-template="template-02"].lang-bn
 .date-value{
+
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
 
     font-size:14pt;
@@ -946,148 +1097,197 @@
 
 
 /* =========================================================
-   20. MOBILE PREVIEW
-   A4 itself stays unchanged.
+   30. MOBILE PREVIEW
 ========================================================= */
 
 @media(max-width:520px){
 
     .page[data-template="template-02"] .college-name{
+
         font-size:23pt;
+
+        background:none !important;
+        background-image:none !important;
+
+        -webkit-text-fill-color:#3f3b91 !important;
     }
 
+
     .page[data-template="template-02"] .college-logo{
+
         width:65mm;
         height:65mm;
 
         margin-top:4mm;
     }
 
+
     .page[data-template="template-02"] .department{
+
         font-size:19pt;
+
+        background:none !important;
+        background-image:none !important;
+
+        -webkit-text-fill-color:#087f6b !important;
     }
 
+
     .page[data-template="template-02"] .assignment-box{
+
         margin-top:9mm;
 
         padding-left:5mm;
         padding-right:5mm;
     }
 
+
     .page[data-template="template-02"] .submitted-area{
+
         margin-top:16mm;
 
         column-gap:17mm;
     }
 
+
     .page[data-template="template-02"]
     .submit-column:first-child{
+
         padding-left:5mm;
     }
 
+
     .page[data-template="template-02"]
     .submit-column:last-child{
+
         padding-left:2mm;
     }
 }
 
 
 /* =========================================================
-   21. VERY SMALL SCREEN
+   31. VERY SMALL SCREEN
 ========================================================= */
 
 @media(max-width:380px){
 
     .page[data-template="template-02"] .college-name{
+
         font-size:22pt;
+
+        background:none !important;
+        background-image:none !important;
+
+        -webkit-text-fill-color:#3f3b91 !important;
     }
+
 
     .page[data-template="template-02"] .department{
+
         font-size:18pt;
+
+        background:none !important;
+        background-image:none !important;
+
+        -webkit-text-fill-color:#087f6b !important;
     }
 
+
     .page[data-template="template-02"] .assignment-on{
+
         font-size:15pt;
     }
 
+
     .page[data-template="template-02"] .submit-heading{
+
         font-size:12pt;
     }
+
 
     .page[data-template="template-02"] .submit-info{
+
         font-size:12pt;
     }
 }
 
 
 /* =========================================================
-   TEMPLATE 02 — EXPORT SHAPE FIX
-   College / Department এর নিচের unwanted shape remove
+   32. FINAL EXPORT SAFETY
+   REMOVE BACKGROUND FROM COLLEGE / DEPARTMENT COMPLETELY
 ========================================================= */
 
-.page[data-template="template-02"] .college-name::before,
-.page[data-template="template-02"] .college-name::after,
-.page[data-template="template-02"] .department::before,
-.page[data-template="template-02"] .department::after{
-    content:none !important;
-    display:none !important;
-
-    width:0 !important;
-    height:0 !important;
-
-    background:none !important;
-    border:none !important;
-    box-shadow:none !important;
-
-    position:static !important;
-}
-
-
-/* College name-এর কোনো background shape থাকলে remove */
-
-.page[data-template="template-02"] .college-name{
-    position:relative;
-
-    background-color:transparent !important;
-
-    box-shadow:none !important;
-
-    border:none !important;
-}
-
-
-/* Department-এর কোনো background shape থাকলে remove */
-
+.page[data-template="template-02"] .college-name,
 .page[data-template="template-02"] .department{
-    position:relative;
+
+    background:transparent !important;
 
     background-color:transparent !important;
 
-    box-shadow:none !important;
+    background-image:none !important;
 
-    border:none !important;
+    background-size:auto !important;
+
+    background-position:initial !important;
+
+    background-repeat:initial !important;
+
+    background-attachment:initial !important;
+
+    -webkit-background-clip:initial !important;
+
+    background-clip:initial !important;
+
+    -webkit-text-fill-color:currentColor !important;
+
+    border:0 !important;
+
+    outline:0 !important;
+
+    box-shadow:none !important;
 }
 
 
 /* =========================================================
-   EXPORT / PRINT FIX
+   33. PRINT / PDF EXPORT
 ========================================================= */
 
 @media print{
+
+    .page[data-template="template-02"] .college-name,
+    .page[data-template="template-02"] .department{
+
+        background:transparent !important;
+
+        background-color:transparent !important;
+
+        background-image:none !important;
+
+        -webkit-background-clip:initial !important;
+
+        background-clip:initial !important;
+
+        -webkit-text-fill-color:currentColor !important;
+
+        border:none !important;
+
+        box-shadow:none !important;
+    }
+
 
     .page[data-template="template-02"] .college-name::before,
     .page[data-template="template-02"] .college-name::after,
     .page[data-template="template-02"] .department::before,
     .page[data-template="template-02"] .department::after{
-        content:none !important;
-        display:none !important;
-        visibility:hidden !important;
-    }
 
-    .page[data-template="template-02"] .college-name,
-    .page[data-template="template-02"] .department{
-        background-color:transparent !important;
-        border:none !important;
-        box-shadow:none !important;
+        content:none !important;
+
+        display:none !important;
+
+        visibility:hidden !important;
+
+        background:none !important;
+
+        background-image:none !important;
     }
 }
