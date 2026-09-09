@@ -1,158 +1,308 @@
 /* =========================================================
    TEMPLATE 01
-   AC-KANVASLIPI — ORIGINAL V1 DESIGN
-========================================================= */
+   CLASSIC GREEN — BORDER ASSET VERSION
+   ========================================================= */
 
 
 /* =========================================================
-   COLLEGE NAME
-========================================================= */
+   01. A4 PAGE
+   ========================================================= */
 
-.college-name{
-    font-family:"Playfair Display",serif;
+.page{
+    position:relative;
 
-    font-size:24pt;
-    font-weight:700;
+    width:210mm;
+    height:297mm;
 
-    line-height:1.2;
+    margin:0;
+    padding:0;
 
-    letter-spacing:.1px;
+    background:#ffffff;
 
-    color:#07503d;
+    overflow:hidden;
 
-    background:
-        linear-gradient(
-            90deg,
-            #06402f 0%,
-            #0b6b52 50%,
-            #06402f 100%
-        );
+    color:#123c32;
 
-    -webkit-background-clip:text;
-    background-clip:text;
+    box-sizing:border-box;
 
-    -webkit-text-fill-color:transparent;
+    transform-origin:top left;
 }
 
 
 /* =========================================================
-   COLLEGE LOGO
-========================================================= */
+   02. BORDER ASSET
+   Uses:
+   ../assets/border.png
 
-.college-logo{
-    width:62mm;
-    height:62mm;
+   JS loads the actual image.
+   ========================================================= */
 
-    margin:5mm auto 5mm;
+.page-border{
+    position:absolute;
 
-    object-fit:contain;
-}
+    inset:0;
 
-
-/* =========================================================
-   DEPARTMENT
-========================================================= */
-
-.department{
-    font-family:"Roboto Condensed",sans-serif;
-
-    font-size:20pt;
-    font-weight:700;
-
-    line-height:1.2;
-
-    color:#08753f;
-
-    background:
-        linear-gradient(
-            90deg,
-            #086638 0%,
-            #139654 50%,
-            #086638 100%
-        );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-}
-
-
-/* =========================================================
-   ASSIGNMENT BOX
-========================================================= */
-
-.assignment-box{
     width:100%;
+    height:100%;
 
-    margin-top:13mm;
+    display:block;
 
-    padding:4.5mm 0 4mm;
+    object-fit:fill;
 
-    border-top:.45mm solid #222;
-    border-bottom:.45mm solid #222;
+    z-index:1;
+
+    opacity:1 !important;
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   03. CONTENT AREA
+   ========================================================= */
+
+.page-content{
+    position:absolute;
+
+    top:18mm;
+    left:17mm;
+    right:17mm;
+    bottom:15mm;
+
+    z-index:2;
+
+    width:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    min-width:0;
 
     box-sizing:border-box;
 }
 
 
 /* =========================================================
-   ASSIGNMENT TITLE
-========================================================= */
+   04. COLLEGE NAME
+   ========================================================= */
 
-.assignment-on{
-    margin:0 0 3.2mm;
+.college-name{
+    width:100%;
+
+    margin:0;
+    padding:0 3mm;
 
     text-align:center;
 
-    font-family:"Roboto Condensed",sans-serif;
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
-    font-size:15pt;
+    font-size:22pt;
+
     font-weight:700;
 
     line-height:1.2;
 
-    color:#111;
+    letter-spacing:.2px;
+
+    color:#07503d;
+
+    white-space:normal;
+
+    overflow-wrap:break-word;
+
+    word-break:normal;
 }
 
 
 /* =========================================================
-   TOPIC
-========================================================= */
+   05. COLLEGE LOGO
+   ========================================================= */
+
+.college-logo{
+    display:block;
+
+    width:43mm;
+    height:43mm;
+
+    margin:6mm auto 5mm;
+
+    object-fit:contain;
+
+    flex:none;
+}
+
+
+/* =========================================================
+   06. DEPARTMENT
+   ========================================================= */
+
+.department{
+    width:100%;
+
+    margin:0;
+    padding:0 2mm;
+
+    text-align:center;
+
+    font-family:
+        "Roboto Condensed",
+        Arial,
+        sans-serif;
+
+    font-size:17pt;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+    letter-spacing:.2px;
+
+    color:#08753f;
+
+    white-space:normal;
+
+    overflow-wrap:break-word;
+
+    word-break:normal;
+}
+
+
+/* =========================================================
+   07. ASSIGNMENT SECTION
+   ========================================================= */
+
+.assignment-box{
+    width:100%;
+
+    margin-top:11mm;
+
+    padding:4mm 0 4.5mm;
+
+    flex:none;
+
+    overflow:hidden;
+
+    border-top:
+        .45mm solid #07503d;
+
+    border-bottom:
+        .45mm solid #07503d;
+
+    position:relative;
+}
+
+
+/* small decorative line */
+
+.assignment-box::before{
+    content:"";
+
+    position:absolute;
+
+    top:-1.5mm;
+    left:50%;
+
+    width:22mm;
+    height:3mm;
+
+    transform:
+        translateX(-50%);
+
+    background:#ffffff;
+
+    z-index:1;
+}
+
+
+/* =========================================================
+   08. ASSIGNMENT TITLE
+   ========================================================= */
+
+.assignment-on{
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    margin:0 0 3mm;
+    padding:0;
+
+    text-align:center;
+
+    font-family:
+        "Roboto Condensed",
+        Arial,
+        sans-serif;
+
+    font-size:14.5pt;
+
+    font-weight:700;
+
+    line-height:1.25;
+
+    color:#123c32;
+
+    white-space:normal;
+}
+
+
+/* =========================================================
+   09. TOPIC ROW
+   ========================================================= */
 
 .topic-row{
     width:100%;
 
+    min-width:0;
+
     display:grid;
 
-    grid-template-columns:auto minmax(0,1fr);
+    grid-template-columns:
+        auto minmax(0,1fr);
 
     column-gap:3mm;
 
     align-items:start;
 }
 
+
+/* =========================================================
+   10. TOPIC LABEL
+   ========================================================= */
+
 .topic-label{
+    min-width:max-content;
+
     white-space:nowrap;
 
-    font-family:"Times New Roman",serif;
+    font-family:
+        "Times New Roman",
+        serif;
 
-    font-size:13.5pt;
+    font-size:12.5pt;
+
+    font-weight:700;
 
     line-height:8mm;
 
-    color:#111;
+    color:#123c32;
 }
 
 
 /* =========================================================
-   TOPIC WRITING AREA
-========================================================= */
+   11. TOPIC WRITING AREA
+   ========================================================= */
 
 .topic-writing-area{
     position:relative;
 
     width:100%;
+
+    min-width:0;
 
     height:17mm;
 
@@ -162,7 +312,7 @@
 }
 
 
-/* First dotted line */
+/* dotted line 01 */
 
 .topic-writing-area::before{
     content:"";
@@ -172,14 +322,14 @@
     left:0;
     right:0;
 
-    top:8.2mm;
+    top:8mm;
 
     height:1px;
 
     background-image:
         radial-gradient(
             circle,
-            #222 .7px,
+            #55766c .65px,
             transparent .95px
         );
 
@@ -193,7 +343,7 @@
 }
 
 
-/* Second dotted line */
+/* dotted line 02 */
 
 .topic-writing-area::after{
     content:"";
@@ -203,14 +353,14 @@
     left:0;
     right:0;
 
-    top:16.1mm;
+    top:16mm;
 
     height:1px;
 
     background-image:
         radial-gradient(
             circle,
-            #222 .7px,
+            #55766c .65px,
             transparent .95px
         );
 
@@ -224,7 +374,9 @@
 }
 
 
-/* Topic text */
+/* =========================================================
+   12. TOPIC TEXT
+   ========================================================= */
 
 .topic-text{
     position:relative;
@@ -239,11 +391,14 @@
 
     background:transparent;
 
-    color:#111;
+    color:#222;
 
-    font-family:"Hind Siliguri",sans-serif;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
 
-    font-size:13pt;
+    font-size:12.5pt;
+
     font-weight:400;
 
     line-height:8mm;
@@ -261,50 +416,95 @@
 
 
 /* =========================================================
-   COURSE
-========================================================= */
+   13. COURSE AREA
+   ========================================================= */
 
 .course-area{
     width:100%;
 
-    margin-top:1.2mm;
+    min-width:0;
+
+    margin-top:2mm;
+
+    padding:2mm 4mm;
 
     text-align:center;
 
-    font-family:"Times New Roman",serif;
+    font-family:
+        "Times New Roman",
+        serif;
 
-    font-size:13.5pt;
+    font-size:12.5pt;
 
-    line-height:1.4;
+    font-weight:500;
 
-    color:#111;
+    line-height:1.45;
+
+    color:#222;
+
+    overflow:hidden;
+
+    box-sizing:border-box;
+}
+
+
+/* course rows */
+
+.course-area > div{
+    width:100%;
+
+    margin:0;
+    padding:0;
+
+    white-space:normal;
+
+    overflow-wrap:anywhere;
+
+    word-break:normal;
+}
+
+
+/* course labels */
+
+#courseNameLabel,
+#courseCodeLabel{
+    font-weight:700;
+
+    color:#123c32;
 }
 
 
 /* =========================================================
-   SUBMITTED AREA
-========================================================= */
+   14. SUBMITTED AREA
+   ========================================================= */
 
 .submitted-area{
     position:relative;
 
     width:100%;
 
-    margin-top:29mm;
+    min-width:0;
+
+    margin-top:27mm;
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(0,1fr);
 
-    column-gap:18mm;
+    column-gap:16mm;
+
+    flex:none;
 }
 
 
-/* Double center divider */
+/* =========================================================
+   15. CENTER DOUBLE DIVIDER
+   ========================================================= */
 
 .submitted-area::before,
 .submitted-area::after{
-
     content:"";
 
     position:absolute;
@@ -312,67 +512,136 @@
     top:-3mm;
     bottom:0;
 
-    width:.4mm;
+    width:.35mm;
 
-    background:#222;
+    background:#6a8078;
 
     z-index:2;
+
+    pointer-events:none;
 }
+
 
 .submitted-area::before{
     left:calc(50% - 1.8mm);
 }
+
 
 .submitted-area::after{
     left:calc(50% + 1.8mm);
 }
 
 
+/* hide old divider */
+
+.vertical-line{
+    display:none !important;
+}
+
+
 /* =========================================================
-   SUBMITTED HEADING
-========================================================= */
+   16. SUBMIT COLUMN
+   ========================================================= */
+
+.submit-column{
+    min-width:0;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+
+/* =========================================================
+   17. SUBMITTED HEADING
+   ========================================================= */
 
 .submit-heading{
-    margin:0 0 9mm;
+    width:100%;
 
-    font-family:Arial,sans-serif;
+    margin:0 0 8mm;
 
-    font-size:13pt;
+    padding:0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:12.5pt;
 
     font-weight:700;
 
     font-style:italic;
 
-    line-height:1.2;
+    line-height:1.25;
 
-    color:#261bb8;
+    letter-spacing:.3px;
+
+    color:#08753f;
+
+    white-space:normal;
+
+    overflow-wrap:break-word;
+
+    word-break:normal;
+}
+
+
+/* little underline */
+
+.submit-heading::after{
+    content:"";
+
+    display:block;
+
+    width:17mm;
+
+    height:.6mm;
+
+    margin-top:2mm;
+
+    background:#08753f;
 }
 
 
 /* =========================================================
-   SUBMITTED INFORMATION
-========================================================= */
+   18. SUBMITTED INFORMATION
+   ========================================================= */
 
 .submit-info{
+    width:100%;
+
     margin:0;
+    padding:0;
 
-    font-family:"Times New Roman",serif;
+    font-family:
+        "Times New Roman",
+        serif;
 
-    font-size:13pt;
+    font-size:12.5pt;
 
     font-weight:400;
 
-    line-height:1.28;
+    line-height:1.35;
 
-    color:#111;
+    color:#222;
+
+    white-space:normal;
 
     overflow-wrap:anywhere;
+
+    word-break:normal;
+}
+
+
+.submit-info span{
+    display:inline;
 }
 
 
 /* =========================================================
-   DATE
-========================================================= */
+   19. DATE
+   ========================================================= */
 
 .date-area{
     width:100%;
@@ -383,23 +652,37 @@
 
     text-align:center;
 
-    font-family:"Roboto Condensed",sans-serif;
+    font-family:
+        "Roboto Condensed",
+        Arial,
+        sans-serif;
 
-    font-size:14pt;
+    font-size:12.5pt;
 
     font-weight:600;
 
-    line-height:1.3;
+    line-height:1.35;
 
-    color:#333;
+    color:#354d45;
+
+    white-space:normal;
 }
 
+
+/* date value */
+
 .date-value{
-    margin-left:6mm;
+    display:inline-block;
 
-    font-family:"Hind Siliguri",sans-serif;
+    margin-left:5mm;
 
-    font-weight:500;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
+
+    font-size:12.5pt;
+
+    font-weight:600;
 
     color:#222;
 
@@ -408,102 +691,173 @@
 
 
 /* =========================================================
-   BANGLA MODE
-========================================================= */
+   20. BANGLA MODE
+   ========================================================= */
+
+.page.lang-bn{
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
+}
+
+
+/* College */
 
 .page.lang-bn .college-name{
-    font-family:"Hind Siliguri",sans-serif;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
 
-    font-size:26pt;
+    font-size:24pt;
+
     font-weight:700;
 
     line-height:1.35;
 
     letter-spacing:0;
+
+    padding:0 2mm;
 }
 
+
+/* Department */
 
 .page.lang-bn .department{
-    font-family:"Hind Siliguri",sans-serif;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
 
-    font-size:22pt;
+    font-size:19pt;
+
     font-weight:700;
 
     line-height:1.35;
+
+    letter-spacing:0;
+
+    padding:0 2mm;
 }
 
+
+/* Assignment */
 
 .page.lang-bn .assignment-on{
-    font-family:"Hind Siliguri",sans-serif;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
 
-    font-size:17pt;
+    font-size:16pt;
+
     font-weight:700;
 
     line-height:1.35;
 }
 
 
+/* Topic label */
+
 .page.lang-bn .topic-label{
-    font-family:"Hind Siliguri",sans-serif;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
 
-    font-size:15pt;
-    font-weight:500;
+    font-size:13.5pt;
 
-    line-height:8.5mm;
+    font-weight:600;
+
+    line-height:8mm;
 }
 
+
+/* Topic */
 
 .page.lang-bn .topic-text{
-    font-family:"Hind Siliguri",sans-serif;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
 
-    font-size:14.5pt;
+    font-size:13pt;
 
-    line-height:8.5mm;
+    line-height:8mm;
 }
 
+
+/* Course */
 
 .page.lang-bn .course-area{
-    font-family:"Hind Siliguri",sans-serif;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
 
-    font-size:14pt;
+    font-size:13pt;
 
     line-height:1.55;
 }
 
+
+/* Submitted heading */
 
 .page.lang-bn .submit-heading{
-    font-family:"Hind Siliguri",sans-serif;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
 
-    font-size:15pt;
+    font-size:14pt;
 
     line-height:1.35;
-
-    margin-bottom:8mm;
 }
 
 
-.page.lang-bn .submit-info{
-    font-family:"Hind Siliguri",sans-serif;
+/* Submitted info */
 
-    font-size:14pt;
+.page.lang-bn .submit-info{
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
+
+    font-size:13pt;
 
     line-height:1.55;
 }
 
 
-.page.lang-bn .date-area{
-    font-family:"Hind Siliguri",sans-serif;
+/* Date */
 
-    font-size:15pt;
+.page.lang-bn .date-area{
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
+
+    font-size:14pt;
 
     line-height:1.4;
 }
 
 
 .page.lang-bn .date-value{
-    font-family:"Hind Siliguri",sans-serif;
+    font-family:
+        "Hind Siliguri",
+        sans-serif;
 
-    margin-left:5mm;
+    font-size:14pt;
 
-    font-size:15pt;
+    font-weight:600;
+}
+
+
+/* =========================================================
+   21. SMALL SCREEN SAFETY
+   A4 itself remains A4.
+   Preview scaling is handled by GDCV2.
+   ========================================================= */
+
+@media(max-width:520px){
+
+    .page-content{
+        top:18mm;
+        left:17mm;
+        right:17mm;
+        bottom:15mm;
+    }
+
 }
