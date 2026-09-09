@@ -1,0 +1,21 @@
+[
+    {
+        "id": "template-01",
+        "name": "Classic Green",
+        "nameBn": "ক্লাসিক গ্রিন",
+        "description": "Original Design",
+        "descriptionBn": "মূল ডিজাইন",
+        "preview": "template-01.jpg",
+        "css": "template-01.css"
+    },
+
+    {
+        "id": "template-02",
+        "name": "Elegant Blue",
+        "nameBn": "এলিগ্যান্ট ব্লু",
+        "description": "Modern Blue Design",
+        "descriptionBn": "আধুনিক নীল ডিজাইন",
+        "preview": "template-02.jpg",
+        "css": "template-02.css"
+    }
+]
