@@ -1,968 +1,766 @@
 /* =========================================================
    TEMPLATE 1 — A4 ASSIGNMENT COVER
-   White Background + Elegant Green Border
+   Clean White + Emerald Academic Design
    ========================================================= */
 
 :root {
-  --primary: #064e3b;
-  --primary-dark: #033b2d;
-  --accent: #0f766e;
-  --gold: #b8860b;
-  --text: #17201c;
-  --muted: #59635f;
-  --line: #0b5a45;
-  --paper: #ffffff;
+    --primary: #075b45;
+    --primary-dark: #034332;
+    --accent: #0b7659;
+    --gold: #b58a35;
+    --text: #17201d;
+    --muted: #5f6965;
+    --line: #0b5b47;
+    --light-line: #c9d9d3;
+    --white: #ffffff;
 }
 
-/* ---------- A4 PAGE ---------- */
+/* =========================
+   A4 PAGE
+   ========================= */
 
-.a4-page,
-.a4,
-.preview-page,
-.paper,
 .template-1 {
-  width: 210mm;
-  height: 297mm;
-  min-width: 210mm;
-  min-height: 297mm;
-
-  position: relative;
-  overflow: hidden;
-
-  background: #fff !important;
-  color: var(--text);
-
-  box-sizing: border-box;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    "Noto Serif Bengali",
-    serif;
-
-  padding: 17mm 15mm 16mm;
-}
-
-
-/* =========================================================
-   OUTER BORDER
-   ========================================================= */
-
-.a4-page::before,
-.a4::before,
-.preview-page::before,
-.paper::before,
-.template-1::before {
-
-  content: "";
-
-  position: absolute;
-  inset: 5mm;
-
-  border: 1.2px solid var(--primary);
-
-  pointer-events: none;
-  z-index: 1;
-}
-
-
-/* ---------- INNER BORDER ---------- */
-
-.a4-page::after,
-.a4::after,
-.preview-page::after,
-.paper::after,
-.template-1::after {
-
-  content: "";
-
-  position: absolute;
-  inset: 7mm;
-
-  border: 0.45px solid rgba(6, 78, 59, 0.65);
-
-  pointer-events: none;
-  z-index: 1;
-}
-
-
-/* =========================================================
-   TOP DECORATIVE SHAPE
-   ========================================================= */
-
-.a4-page .top-decoration,
-.a4 .top-decoration,
-.preview-page .top-decoration,
-.paper .top-decoration,
-.template-1 .top-decoration {
-
-  position: absolute;
-
-  top: 5mm;
-  left: 5mm;
-  right: 5mm;
-
-  height: 9mm;
-
-  border-top: 2px solid var(--primary);
-
-  pointer-events: none;
-}
-
-
-/* =========================================================
-   CORNER ORNAMENTS
-   ========================================================= */
-
-.corner {
-  position: absolute;
-  width: 18mm;
-  height: 18mm;
-
-  z-index: 5;
-  pointer-events: none;
-}
-
-.corner::before,
-.corner::after {
-  content: "";
-  position: absolute;
-
-  border-color: var(--primary);
-}
-
-.corner-tl {
-  top: 5.5mm;
-  left: 5.5mm;
-}
-
-.corner-tr {
-  top: 5.5mm;
-  right: 5.5mm;
-  transform: scaleX(-1);
-}
-
-.corner-bl {
-  bottom: 5.5mm;
-  left: 5.5mm;
-  transform: scaleY(-1);
-}
-
-.corner-br {
-  bottom: 5.5mm;
-  right: 5.5mm;
-  transform: scale(-1);
-}
-
-
-/* =========================================================
-   HEADER AREA
-   ========================================================= */
-
-.cover-header,
-.header-section,
-.college-header {
-
-  position: relative;
-
-  z-index: 10;
-
-  width: 100%;
-
-  text-align: center;
-
-  margin-top: 7mm;
-}
-
-
-/* ---------- COLLEGE NAME ENGLISH ---------- */
-
-.college-name,
-.college-title,
-.university-name {
-
-  display: block;
-
-  margin: 0 auto;
-
-  color: var(--primary);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 20pt;
-  font-weight: 700;
-
-  line-height: 1.15;
-
-  letter-spacing: 0.3px;
-
-  text-transform: uppercase;
-}
-
-
-/* ---------- COLLEGE NAME BANGLA ---------- */
-
-.college-name-bn,
-.college-bangla,
-.institution-bn {
-
-  display: block;
-
-  margin-top: 2mm;
-
-  color: var(--primary);
-
-  font-family:
-    "Noto Serif Bengali",
-    "SolaimanLipi",
-    serif;
-
-  font-size: 14pt;
-
-  font-weight: 700;
-
-  line-height: 1.35;
-}
-
-
-/* =========================================================
-   LOGO
-   ========================================================= */
-
-.college-logo,
-.university-logo,
-.logo {
-
-  display: block;
-
-  width: 65px !important;
-  height: 65px !important;
-
-  min-width: 65px;
-  min-height: 65px;
-
-  max-width: 65px;
-  max-height: 65px;
-
-  object-fit: contain;
-
-  margin: 5mm auto 4mm;
-
-  position: relative;
-
-  z-index: 20;
-}
-
-
-/* যদি logo image-এর parent থাকে */
-
-.logo-wrapper,
-.college-logo-wrapper,
-.university-logo-wrapper {
-
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-
-  margin: 4mm auto;
-
-  position: relative;
-
-  z-index: 20;
-}
-
-.logo-wrapper img,
-.college-logo-wrapper img,
-.university-logo-wrapper img {
-
-  width: 65px !important;
-  height: 65px !important;
-
-  object-fit: contain;
-}
-
-
-/* =========================================================
-   DEPARTMENT ENGLISH
-   ========================================================= */
-
-.department-name,
-.department-title {
-
-  display: block;
-
-  margin-top: 2mm;
-
-  color: var(--primary);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 15pt;
-
-  font-weight: 700;
-
-  letter-spacing: 0.2px;
-
-  text-transform: uppercase;
-
-  line-height: 1.2;
-}
-
-
-/* ---------- DEPARTMENT BANGLA ---------- */
-
-.department-name-bn,
-.department-bangla,
-.department-bn {
-
-  display: block;
-
-  margin-top: 1.5mm;
-
-  color: var(--primary);
-
-  font-family:
-    "Noto Serif Bengali",
-    "SolaimanLipi",
-    serif;
-
-  font-size: 12pt;
-
-  font-weight: 700;
-
-  line-height: 1.3;
-}
-
-
-/* =========================================================
-   HEADER DIVIDER
-   ========================================================= */
-
-.header-divider,
-.divider,
-.section-line {
-
-  width: 82%;
-
-  height: 1px;
-
-  margin: 7mm auto 5mm;
-
-  background: var(--primary);
-
-  position: relative;
-}
-
-.header-divider::after,
-.divider::after,
-.section-line::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  width: 34px;
-  height: 4px;
-
-  background: var(--gold);
-
-  border-radius: 10px;
-}
-
-
-/* =========================================================
-   ASSIGNMENT ON
-   ========================================================= */
-
-.assignment-title,
-.assignment-on,
-.cover-title {
-
-  text-align: center;
-
-  color: var(--primary-dark);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 15pt;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  margin: 3mm 0 2mm;
-
-  line-height: 1.25;
-}
-
-
-/* ---------- BANGLA ASSIGNMENT ---------- */
-
-.assignment-title-bn,
-.assignment-bn {
-
-  text-align: center;
-
-  color: var(--primary);
-
-  font-family:
-    "Noto Serif Bengali",
-    "SolaimanLipi",
-    serif;
-
-  font-size: 12pt;
-
-  font-weight: 700;
-
-  margin-top: 1mm;
-
-  line-height: 1.35;
-}
-
-
-/* =========================================================
-   TOPIC AREA
-   ========================================================= */
-
-.topic-section,
-.topic-box,
-.assignment-topic {
-
-  width: 90%;
-
-  margin: 4mm auto 0;
-
-  padding: 4mm 5mm;
-
-  box-sizing: border-box;
-
-  border-top: 1px solid var(--line);
-
-  border-bottom: 1px solid var(--line);
-
-  background: #fff;
-
-  position: relative;
-
-  z-index: 10;
-}
-
-
-/* ---------- TOPIC LABEL ---------- */
-
-.topic-label,
-.topic-title {
-
-  color: var(--primary);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 10.5pt;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-}
-
-
-/* ---------- TOPIC INPUT / TEXT ---------- */
-
-.topic-input,
-.topic-value,
-.topic-text {
-
-  color: #333;
-
-  font-family:
-    "Noto Serif Bengali",
-    "SolaimanLipi",
-    Georgia,
-    serif;
-
-  font-size: 10pt;
-
-  line-height: 1.5;
-
-  border: 0;
-
-  outline: 0;
-
-  background: transparent;
-}
-
-
-/* =========================================================
-   COURSE INFORMATION
-   ========================================================= */
-
-.course-info,
-.course-section {
-
-  text-align: center;
-
-  margin-top: 4mm;
-
-  color: var(--primary-dark);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 10.5pt;
-
-  font-weight: 700;
-
-  line-height: 1.55;
-}
-
-
-/* Course Name */
-
-.course-name {
-  display: block;
-
-  text-transform: uppercase;
-}
-
-
-/* Course Code */
-
-.course-code {
-  display: block;
-
-  text-transform: uppercase;
-}
-
-
-/* Bangla course information */
-
-.course-info-bn,
-.course-bn {
-
-  font-family:
-    "Noto Serif Bengali",
-    "SolaimanLipi",
-    serif;
-
-  font-size: 10.5pt;
-
-  font-weight: 700;
-}
-
-
-/* =========================================================
-   SECOND DIVIDER
-   ========================================================= */
-
-.content-divider,
-.course-divider {
-
-  width: 90%;
-
-  height: 1px;
-
-  margin: 5mm auto 0;
-
-  background: var(--line);
-}
-
-
-/* =========================================================
-   SUBMITTED AREA
-   ========================================================= */
-
-.submission-section,
-.submitted-section,
-.submission-area {
-
-  width: 88%;
-
-  margin: 16mm auto 0;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  position: relative;
-
-  z-index: 10;
-}
-
-
-/* ---------- EACH COLUMN ---------- */
-
-.submitted-to,
-.submitted-by,
-.submit-column {
-
-  min-height: 35mm;
-
-  padding: 0 7mm;
-
-  box-sizing: border-box;
-
-  text-align: left;
-}
-
-
-/* ---------- IMPORTANT:
-   Submitted To একটু ডান দিকে ---------- */
-
-.submitted-to {
-
-  padding-left: 10mm;
-}
-
-
-/* ---------- SUBMITTED BY ---------- */
-
-.submitted-by {
-
-  padding-left: 8mm;
-}
-
-
-/* =========================================================
-   CENTER VERTICAL LINE
-   ========================================================= */
-
-.submission-section::before,
-.submitted-section::before,
-.submission-area::before {
-
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  bottom: 0;
-
-  left: 50%;
-
-  width: 1px;
-
-  background: var(--primary);
-
-  transform: translateX(-50%);
-}
-
-
-/* দ্বিতীয় পাতলা লাইন */
-
-.submission-section::after,
-.submitted-section::after,
-.submission-area::after {
-
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  bottom: 0;
-
-  left: calc(50% + 2.2mm);
-
-  width: 0.5px;
-
-  background: rgba(6, 78, 59, 0.55);
-
-}
-
-
-/* =========================================================
-   SUBMITTED HEADINGS
-   ========================================================= */
-
-.submitted-heading,
-.submit-heading,
-.submitted-to-title,
-.submitted-by-title {
-
-  display: inline-block;
-
-  color: var(--primary);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 10pt;
-
-  font-weight: 700;
-
-  font-style: italic;
-
-  text-transform: uppercase;
-
-  padding-bottom: 2mm;
-
-  border-bottom: 1.5px solid var(--primary);
-
-  margin-bottom: 4mm;
-}
-
-
-/* =========================================================
-   SUBMISSION DETAILS
-   ========================================================= */
-
-.submitted-details,
-.submit-details,
-.submitted-text {
-
-  color: #242424;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 9.5pt;
-
-  line-height: 1.45;
-
-  text-align: left;
-}
-
-
-/* Bangla details */
-
-.submitted-details-bn,
-.submit-details-bn {
-
-  font-family:
-    "Noto Serif Bengali",
-    "SolaimanLipi",
-    serif;
-
-  font-size: 9.5pt;
-
-  line-height: 1.55;
-}
-
-
-/* =========================================================
-   DATE OF SUBMISSION
-   ========================================================= */
-
-.submission-date,
-.date-section,
-.date-of-submission {
-
-  position: absolute;
-
-  left: 50%;
-
-  bottom: 10mm;
-
-  transform: translateX(-50%);
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 4mm;
-
-  width: max-content;
-
-  color: var(--primary);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 9pt;
-
-  font-weight: 700;
-
-  z-index: 20;
-}
-
-
-/* ---------- DATE VALUE ---------- */
-
-.date-value,
-.submission-date-value {
-
-  padding: 1.5mm 4mm;
-
-  border: 1px solid rgba(6, 78, 59, 0.35);
-
-  border-radius: 20px;
-
-  background: #fff;
-
-  color: var(--primary-dark);
-
-  font-weight: 700;
-}
-
-
-/* =========================================================
-   FIXED CONTENT — prevent disappearing
-   ========================================================= */
-
-.fixed-content,
-.static-content,
-.cover-fixed {
-
-  position: relative;
-
-  display: block;
-
-  visibility: visible !important;
-
-  opacity: 1 !important;
-
-  z-index: 50;
-}
-
-
-/* =========================================================
-   MOBILE PREVIEW
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-  .a4-page,
-  .a4,
-  .preview-page,
-  .paper,
-  .template-1 {
-
     width: 210mm;
     height: 297mm;
-
-    transform-origin: top center;
-  }
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: var(--text);
+    font-family: "Times New Roman", "Noto Serif Bengali", serif;
+    margin: 0 auto;
+    padding: 15mm 14mm;
 }
 
+/* =========================
+   OUTER DECORATIVE BORDER
+   ========================= */
 
-/* =========================================================
-   PRINT / PDF
-   ========================================================= */
+.template-1::before {
+    content: "";
+    position: absolute;
+    inset: 5mm;
+    border: 1.4px solid var(--primary);
+    pointer-events: none;
+}
+
+.template-1::after {
+    content: "";
+    position: absolute;
+    inset: 7mm;
+    border: 0.7px solid rgba(7, 91, 69, 0.55);
+    pointer-events: none;
+}
+
+/* =========================
+   TOP CORNER DECORATIONS
+   ========================= */
+
+.template-1 .corner {
+    position: absolute;
+    width: 24mm;
+    height: 24mm;
+    z-index: 2;
+}
+
+.template-1 .corner-tl {
+    top: 5mm;
+    left: 5mm;
+}
+
+.template-1 .corner-tr {
+    top: 5mm;
+    right: 5mm;
+}
+
+.template-1 .corner-bl {
+    bottom: 5mm;
+    left: 5mm;
+}
+
+.template-1 .corner-br {
+    bottom: 5mm;
+    right: 5mm;
+}
+
+/* =========================
+   TOP HEADER
+   ========================= */
+
+.template-1 .cover-header {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    margin-top: 13mm;
+}
+
+/* College English Name */
+
+.template-1 .college-name {
+    margin: 0;
+    color: var(--primary-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* College Bangla Name */
+
+.template-1 .college-name-bn {
+    margin-top: 2mm;
+    color: var(--primary);
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* =========================
+   LOGO
+   ========================= */
+
+.template-1 .college-logo {
+    display: block;
+    width: 68px;
+    height: 68px;
+    min-width: 68px;
+    min-height: 68px;
+    max-width: 90px;
+    max-height: 90px;
+    object-fit: contain;
+    margin: 7mm auto 5mm;
+    position: relative;
+    z-index: 10;
+}
+
+/* যদি logo container থাকে */
+
+.template-1 .logo-box {
+    width: 76px;
+    height: 76px;
+    margin: 5mm auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.template-1 .logo-box img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+}
+
+/* =========================
+   DEPARTMENT
+   ========================= */
+
+.template-1 .department-name {
+    margin: 4mm 0 0;
+    color: var(--primary);
+    font-family: Arial, "Times New Roman", sans-serif;
+    font-size: 17px;
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.template-1 .department-name-bn {
+    margin-top: 1.5mm;
+    color: var(--primary-dark);
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* =========================
+   HEADER DECORATIVE LINE
+   ========================= */
+
+.template-1 .header-line {
+    width: 82%;
+    height: 1px;
+    background: var(--line);
+    margin: 7mm auto 0;
+    position: relative;
+}
+
+.template-1 .header-line::before,
+.template-1 .header-line::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--primary);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.template-1 .header-line::before {
+    left: -3px;
+}
+
+.template-1 .header-line::after {
+    right: -3px;
+}
+
+/* =========================
+   ASSIGNMENT TITLE
+   ========================= */
+
+.template-1 .assignment-heading {
+    text-align: center;
+    margin-top: 5mm;
+}
+
+.template-1 .assignment-heading .english {
+    margin: 0;
+    color: #151c19;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.template-1 .assignment-heading .bangla {
+    margin-top: 1mm;
+    color: var(--primary);
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* =========================
+   TOPIC / COURSE SECTION
+   ========================= */
+
+.template-1 .course-section {
+    width: 88%;
+    margin: 5mm auto 0;
+    padding: 4mm 6mm 4.5mm;
+    border-top: 1.2px solid var(--line);
+    border-bottom: 1.2px solid var(--line);
+    box-sizing: border-box;
+}
+
+.template-1 .topic-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 3mm;
+    margin-bottom: 3mm;
+}
+
+.template-1 .topic-label {
+    flex: 0 0 auto;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+}
+
+.template-1 .topic-value {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+    border-bottom: 1px dotted #777;
+    padding-bottom: 1mm;
+}
+
+/* Bangla topic */
+
+.template-1 .topic-label-bn {
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.template-1 .topic-value-bn {
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 13px;
+    color: #333;
+    border-bottom: 1px dotted #777;
+    padding-bottom: 1mm;
+}
+
+/* =========================
+   COURSE NAME
+   ========================= */
+
+.template-1 .course-info {
+    text-align: center;
+    margin-top: 3mm;
+}
+
+.template-1 .course-name {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1c2521;
+    text-transform: uppercase;
+}
+
+.template-1 .course-code {
+    margin-top: 1.5mm;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #252d29;
+}
+
+/* Bangla course */
+
+.template-1 .course-name-bn {
+    margin: 0;
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.template-1 .course-code-bn {
+    margin-top: 1mm;
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* =========================
+   SUBMITTED AREA
+   ========================= */
+
+.template-1 .submission-area {
+    width: 88%;
+    margin: 13mm auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+/* Middle divider */
+
+.template-1 .submission-area::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--primary);
+    transform: translateX(-50%);
+}
+
+.template-1 .submission-area::after {
+    content: "";
+    position: absolute;
+    left: calc(50% + 5px);
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(7, 91, 69, 0.55);
+}
+
+/* =========================
+   SUBMITTED TO / BY
+   ========================= */
+
+.template-1 .submitted-box {
+    min-height: 43mm;
+    box-sizing: border-box;
+}
+
+.template-1 .submitted-to {
+    padding-left: 5mm;
+    padding-right: 9mm;
+}
+
+.template-1 .submitted-by {
+    padding-left: 12mm;
+    padding-right: 5mm;
+}
+
+/* Heading */
+
+.template-1 .submitted-title {
+    display: inline-block;
+    margin: 0 0 4mm;
+    color: var(--primary);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-bottom: 1.5px solid var(--primary);
+    padding-bottom: 1.5mm;
+}
+
+/* Bangla heading */
+
+.template-1 .submitted-title-bn {
+    display: inline-block;
+    margin: 0 0 4mm;
+    color: var(--primary);
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1.5px solid var(--primary);
+    padding-bottom: 1.5mm;
+}
+
+/* Information */
+
+.template-1 .submitted-info {
+    margin: 0;
+    color: #252b28;
+    font-family: "Times New Roman", serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+.template-1 .submitted-info-bn {
+    margin: 0;
+    color: #252b28;
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 12.5px;
+    line-height: 1.65;
+}
+
+/* =========================
+   DATE
+   ========================= */
+
+.template-1 .submission-date {
+    position: absolute;
+    bottom: 12mm;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.template-1 .date-label {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #303936;
+}
+
+.template-1 .date-value {
+    display: inline-block;
+    margin-left: 3mm;
+    padding: 1.5mm 5mm;
+    border: 1px solid #b7cbc4;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    background: #fff;
+}
+
+/* Bangla Date */
+
+.template-1 .date-label-bn {
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #303936;
+}
+
+.template-1 .date-value-bn {
+    display: inline-block;
+    margin-left: 3mm;
+    padding: 1.5mm 5mm;
+    border: 1px solid #b7cbc4;
+    border-radius: 20px;
+    font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    background: #fff;
+}
+
+/* =========================
+   DECORATIVE TOP / BOTTOM SHAPES
+   ========================= */
+
+.template-1 .shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Top left small shape */
+
+.template-1 .shape-top-left {
+    top: 12mm;
+    left: 10mm;
+    width: 16mm;
+    height: 16mm;
+    border-left: 2px solid var(--primary);
+    border-top: 2px solid var(--primary);
+}
+
+/* Top right */
+
+.template-1 .shape-top-right {
+    top: 12mm;
+    right: 10mm;
+    width: 16mm;
+    height: 16mm;
+    border-right: 2px solid var(--primary);
+    border-top: 2px solid var(--primary);
+}
+
+/* Bottom left */
+
+.template-1 .shape-bottom-left {
+    bottom: 12mm;
+    left: 10mm;
+    width: 16mm;
+    height: 16mm;
+    border-left: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+/* Bottom right */
+
+.template-1 .shape-bottom-right {
+    bottom: 12mm;
+    right: 10mm;
+    width: 16mm;
+    height: 16mm;
+    border-right: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+/* =========================
+   PRINT SETTINGS
+   ========================= */
 
 @page {
-
-  size: A4 portrait;
-
-  margin: 0;
+    size: A4 portrait;
+    margin: 0;
 }
 
 @media print {
 
-  html,
-  body {
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        background: #fff !important;
+    }
 
-    width: 210mm;
-    height: 297mm;
+    .template-1 {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 15mm 14mm;
+        background: #fff !important;
+        box-shadow: none !important;
+        page-break-after: always;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 
-    margin: 0 !important;
-
-    padding: 0 !important;
-
-    background: #fff !important;
-  }
-
-  .a4-page,
-  .a4,
-  .preview-page,
-  .paper,
-  .template-1 {
-
-    width: 210mm !important;
-    height: 297mm !important;
-
-    min-width: 210mm !important;
-    min-height: 297mm !important;
-
-    margin: 0 !important;
-
-    padding: 17mm 15mm 16mm !important;
-
-    box-shadow: none !important;
-
-    transform: none !important;
-
-    page-break-after: always;
-
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
-
-  .no-print {
-    display: none !important;
-  }
+    .template-1 * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 }
 
+/* =========================
+   MOBILE PREVIEW
+   ========================= */
 
-/* =========================================================
-   EXTRA OVERRIDE
-   যদি আগের CSS নতুন লেখা hide করে
-   ========================================================= */
+@media screen and (max-width: 600px) {
 
-.college-name,
-.college-name-bn,
-.college-title,
-.college-bangla,
-.college-logo,
-.university-logo,
-.department-name,
-.department-name-bn,
-.department-title,
-.department-bangla,
-.assignment-title,
-.assignment-on,
-.assignment-title-bn,
-.assignment-bn {
+    .template-1 {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 210 / 297;
+        padding: 5.3% 5%;
+        transform-origin: top center;
+    }
 
-  visibility: visible !important;
+    .template-1::before {
+        inset: 1.8%;
+    }
 
-  opacity: 1 !important;
+    .template-1::after {
+        inset: 2.5%;
+    }
 
-  display: block !important;
+    .template-1 .cover-header {
+        margin-top: 4.5%;
+    }
+
+    .template-1 .college-name {
+        font-size: clamp(10px, 3.3vw, 23px);
+        letter-spacing: 0.4px;
+    }
+
+    .template-1 .college-name-bn {
+        font-size: clamp(8px, 2.5vw, 17px);
+    }
+
+    .template-1 .college-logo {
+        width: clamp(65px, 18vw, 85px);
+        height: clamp(65px, 18vw, 85px);
+        margin: 3.5% auto;
+    }
+
+    .template-1 .department-name {
+        font-size: clamp(8px, 2.6vw, 17px);
+        letter-spacing: 0.3px;
+    }
+
+    .template-1 .department-name-bn {
+        font-size: clamp(8px, 2.4vw, 16px);
+    }
+
+    .template-1 .header-line {
+        margin-top: 3.5%;
+        width: 84%;
+    }
+
+    .template-1 .assignment-heading {
+        margin-top: 3%;
+    }
+
+    .template-1 .assignment-heading .english {
+        font-size: clamp(9px, 2.8vw, 18px);
+    }
+
+    .template-1 .assignment-heading .bangla {
+        font-size: clamp(8px, 2.3vw, 15px);
+    }
+
+    .template-1 .course-section {
+        margin-top: 3%;
+        padding: 2.8% 4%;
+    }
+
+    .template-1 .topic-row {
+        gap: 2%;
+        margin-bottom: 2%;
+    }
+
+    .template-1 .topic-label,
+    .template-1 .topic-label-bn {
+        font-size: clamp(7px, 2.1vw, 14px);
+    }
+
+    .template-1 .topic-value,
+    .template-1 .topic-value-bn {
+        font-size: clamp(7px, 1.95vw, 13px);
+    }
+
+    .template-1 .course-name,
+    .template-1 .course-name-bn {
+        font-size: clamp(7px, 2vw, 14px);
+    }
+
+    .template-1 .course-code,
+    .template-1 .course-code-bn {
+        font-size: clamp(7px, 1.9vw, 13px);
+    }
+
+    .template-1 .submission-area {
+        margin-top: 6%;
+    }
+
+    .template-1 .submitted-box {
+        min-height: 0;
+    }
+
+    .template-1 .submitted-to {
+        padding-left: 7%;
+        padding-right: 8%;
+    }
+
+    .template-1 .submitted-by {
+        padding-left: 13%;
+        padding-right: 5%;
+    }
+
+    .template-1 .submitted-title {
+        font-size: clamp(7px, 1.9vw, 13px);
+        margin-bottom: 3%;
+        padding-bottom: 1%;
+    }
+
+    .template-1 .submitted-title-bn {
+        font-size: clamp(7px, 2vw, 14px);
+        margin-bottom: 3%;
+    }
+
+    .template-1 .submitted-info,
+    .template-1 .submitted-info-bn {
+        font-size: clamp(6.5px, 1.8vw, 12.5px);
+        line-height: 1.45;
+    }
+
+    .template-1 .submission-date {
+        bottom: 5%;
+    }
+
+    .template-1 .date-label,
+    .template-1 .date-label-bn {
+        font-size: clamp(7px, 1.8vw, 13px);
+    }
+
+    .template-1 .date-value,
+    .template-1 .date-value-bn {
+        margin-left: 1.5%;
+        padding: 1% 3%;
+        font-size: clamp(6.5px, 1.7vw, 12px);
+    }
 }
 
+/* =========================
+   BANGLA FONT SUPPORT
+   ========================= */
 
-/* Logo must remain large */
+.template-1 [lang="bn"],
+.template-1 .bn,
+.template-1 .bangla {
+    font-family:
+        "Noto Serif Bengali",
+        "Noto Sans Bengali",
+        "SolaimanLipi",
+        "Kalpurush",
+        sans-serif;
+}
 
-img.college-logo,
-img.university-logo,
-img.logo {
+/* =========================
+   PDF QUALITY
+   ========================= */
 
-  width: 65px !important;
-  height: 65px !important;
+.template-1 img {
+    image-rendering: auto;
+    -webkit-user-drag: none;
+}
 
-  max-width: 65px !important;
-  max-height: 65px !important;
+.template-1,
+.template-1 * {
+    box-sizing: border-box;
+}
 
-  object-fit: contain !important;
+/* Prevent unwanted selection in preview */
+
+.template-1 {
+    user-select: none;
 }
