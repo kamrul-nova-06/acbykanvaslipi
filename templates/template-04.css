@@ -1,0 +1,953 @@
+/* =========================================================
+   TEMPLATE 04 — PREMIUM PROFESSIONAL EDITION
+   BURGUNDY · CHAMPAGNE GOLD · FOREST GREEN
+   A4 ASSIGNMENT COVER · CSS ONLY
+========================================================= */
+
+
+/* =========================================================
+   01. A4 PAGE
+========================================================= */
+
+.page[data-template="template-04"]{
+    position:relative;
+    width:210mm;
+    height:297mm;
+    overflow:hidden;
+    box-sizing:border-box;
+    background:#ffffff;
+    color:#1c1a1f;
+    font-family:"Times New Roman",serif;
+}
+
+
+/* =========================================================
+   02. BORDER ASSET OFF
+========================================================= */
+
+.page[data-template="template-04"] .page-border{
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+}
+
+
+/* =========================================================
+   03. PAGE DECORATION — BURGUNDY DIAGONAL FRAME
+========================================================= */
+
+/* TOP-LEFT — Burgundy diagonal slab */
+.page[data-template="template-04"]::before{
+    content:"";
+    position:absolute;
+    width:82mm;
+    height:82mm;
+    top:-46mm;
+    left:-46mm;
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle at 68% 68%,
+            #7f1d1d 0%,
+            #5b1a1a 55%,
+            #3b0f0f 100%
+        );
+    box-shadow:
+        0 0 0 .8mm rgba(212,175,55,.45),
+        0 0 0 2.4mm rgba(212,175,55,.12);
+    z-index:0;
+    pointer-events:none;
+}
+
+/* TOP-RIGHT — Forest green arc */
+.page[data-template="template-04"]::after{
+    content:"";
+    position:absolute;
+    width:52mm;
+    height:52mm;
+    top:-28mm;
+    right:-24mm;
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle at 35% 68%,
+            #15803d 0%,
+            #166534 55%,
+            #052e16 100%
+        );
+    box-shadow:
+        0 0 0 .8mm rgba(212,175,55,.45),
+        0 0 0 2.4mm rgba(212,175,55,.12);
+    z-index:0;
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   04. PAGE CONTENT
+========================================================= */
+
+.page[data-template="template-04"] .page-content{
+    position:absolute;
+    top:14mm;
+    left:16mm;
+    right:15mm;
+    bottom:13mm;
+    width:auto;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    box-sizing:border-box;
+    padding-left:4mm;
+}
+
+/* Left vertical gold accent bar */
+.page[data-template="template-04"]
+.page-content::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:6mm;
+    bottom:6mm;
+    width:.6mm;
+    border-radius:2mm;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            #d4af37 8%,
+            #7f1d1d 50%,
+            #d4af37 92%,
+            transparent 100%
+        );
+    opacity:.65;
+    pointer-events:none;
+}
+
+/* Bottom soft radial aura */
+.page[data-template="template-04"]
+.page-content::before{
+    content:"";
+    position:absolute;
+    width:110mm;
+    height:110mm;
+    right:-60mm;
+    bottom:-64mm;
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(127,29,29,.12) 0%,
+            rgba(21,128,61,.06) 42%,
+            transparent 72%
+        );
+    z-index:-1;
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   05. COLLEGE NAME
+========================================================= */
+
+.page[data-template="template-04"] .college-name{
+    position:relative;
+    width:100%;
+    margin:1mm 0 0;
+    padding:0 0 3.5mm;
+    text-align:center;
+    font-family:"Playfair Display","Times New Roman",serif;
+    font-size:23pt;
+    font-weight:700;
+    line-height:1.22;
+    letter-spacing:.5px;
+    color:#3b0f0f;
+    background:none;
+    -webkit-text-fill-color:initial;
+    white-space:normal;
+    overflow-wrap:break-word;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+/* Double golden underline */
+.page[data-template="template-04"]
+.college-name::after{
+    content:"" !important;
+    display:block !important;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:48mm;
+    height:1.4mm;
+    border-top:.55mm solid #d4af37;
+    border-bottom:.35mm solid #7f1d1d;
+    border-radius:0;
+    box-shadow:0 0 4mm rgba(212,175,55,.30);
+}
+
+.page[data-template="template-04"]
+.college-name::before{
+    content:none !important;
+    display:none !important;
+}
+
+
+/* =========================================================
+   06. UNIVERSITY LOGO
+========================================================= */
+
+.page[data-template="template-04"] .college-logo{
+    display:block;
+    width:58mm;
+    height:58mm;
+    margin:6mm auto 4mm;
+    object-fit:contain;
+    flex:none;
+    filter:
+        drop-shadow(0 2mm 3mm rgba(59,15,15,.16))
+        drop-shadow(0 0 6mm rgba(212,175,55,.12));
+}
+
+
+/* =========================================================
+   07. DEPARTMENT
+========================================================= */
+
+.page[data-template="template-04"] .department{
+    position:relative;
+    width:100%;
+    margin:0;
+    padding:0 0 2.2mm;
+    text-align:center;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:19pt;
+    font-weight:800;
+    line-height:1.22;
+    letter-spacing:.7px;
+    color:#166534;
+    background:none;
+    -webkit-text-fill-color:initial;
+    text-transform:uppercase;
+    white-space:normal;
+    overflow-wrap:break-word;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+/* Small diamond accent under department */
+.page[data-template="template-04"]
+.department::after{
+    content:"" !important;
+    display:block !important;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%) rotate(45deg);
+    width:1.6mm;
+    height:1.6mm;
+    background:#15803d;
+    box-shadow:0 0 0 .35mm rgba(212,175,55,.55);
+}
+
+.page[data-template="template-04"]
+.department::before{
+    content:none !important;
+    display:none !important;
+}
+
+
+/* =========================================================
+   08. ASSIGNMENT BOX
+========================================================= */
+
+.page[data-template="template-04"] .assignment-box{
+    position:relative;
+    width:100%;
+    margin-top:10mm;
+    padding:7mm 7mm 6mm;
+    box-sizing:border-box;
+    flex:none;
+    overflow:hidden;
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fdfaf4 50%,
+            #f5fbf6 100%
+        );
+    border:.4mm solid #7f1d1d;
+    border-radius:2mm;
+    box-shadow:
+        0 2mm 6mm rgba(59,15,15,.10),
+        inset 0 0 0 .35mm rgba(212,175,55,.55);
+}
+
+/* Top triple accent stripe */
+.page[data-template="template-04"]
+.assignment-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:1.4mm;
+    background:
+        linear-gradient(
+            90deg,
+            #7f1d1d 0%,
+            #7f1d1d 33%,
+            #d4af37 33%,
+            #d4af37 66%,
+            #15803d 66%,
+            #15803d 100%
+        );
+    z-index:2;
+}
+
+/* Corner bracket decoration */
+.page[data-template="template-04"]
+.assignment-box::after{
+    content:"";
+    position:absolute;
+    width:10mm;
+    height:10mm;
+    bottom:2.2mm;
+    right:2.2mm;
+    border-bottom:.45mm solid #d4af37;
+    border-right:.45mm solid #d4af37;
+    border-radius:0 0 1mm 0;
+    opacity:.9;
+}
+
+
+/* =========================================================
+   09. ASSIGNMENT ON
+========================================================= */
+
+.page[data-template="template-04"]
+.assignment-on{
+    position:relative;
+    z-index:3;
+    width:100%;
+    margin:0 0 5mm;
+    padding:0 0 2.5mm;
+    text-align:center;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:15pt;
+    font-weight:800;
+    line-height:1.25;
+    color:#3b0f0f;
+    letter-spacing:1.6px;
+    text-transform:uppercase;
+    white-space:normal;
+}
+
+/* Decorative bracket-flanked divider */
+.page[data-template="template-04"]
+.assignment-on::after{
+    content:"";
+    display:block;
+    margin:2.5mm auto 0;
+    width:26mm;
+    height:.5mm;
+    border-radius:2mm;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37 20%,
+            #7f1d1d 50%,
+            #d4af37 80%,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   10. TOPIC ROW
+========================================================= */
+
+.page[data-template="template-04"] .topic-row{
+    width:100%;
+    min-width:0;
+    display:grid;
+    grid-template-columns:auto minmax(0,1fr);
+    column-gap:3.5mm;
+    align-items:start;
+}
+
+
+/* =========================================================
+   11. TOPIC LABEL
+========================================================= */
+
+.page[data-template="template-04"] .topic-label{
+    min-width:max-content;
+    padding-top:.3mm;
+    font-family:"Times New Roman",serif;
+    font-size:13.5pt;
+    font-weight:700;
+    line-height:8mm;
+    color:#3b0f0f;
+    letter-spacing:.4px;
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   12. TOPIC WRITING
+========================================================= */
+
+.page[data-template="template-04"]
+.topic-writing-area{
+    position:relative;
+    width:100%;
+    min-width:0;
+    height:17mm;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+/* Dotted line 01 */
+.page[data-template="template-04"]
+.topic-writing-area::before{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:8.2mm;
+    height:.25mm;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #c9b98a 0,
+            #c9b98a 1.2px,
+            transparent 1.2px,
+            transparent 3.6px
+        );
+    opacity:.9;
+    pointer-events:none;
+}
+
+/* Dotted line 02 */
+.page[data-template="template-04"]
+.topic-writing-area::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:16.1mm;
+    height:.25mm;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #c9b98a 0,
+            #c9b98a 1.2px,
+            transparent 1.2px,
+            transparent 3.6px
+        );
+    opacity:.9;
+    pointer-events:none;
+}
+
+/* Topic text */
+.page[data-template="template-04"]
+.topic-text{
+    position:relative;
+    z-index:3;
+    width:100%;
+    height:17mm;
+    margin:0;
+    padding:0;
+    background:transparent;
+    color:#221a1a;
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13pt;
+    font-weight:500;
+    line-height:8mm;
+    white-space:pre-wrap;
+    overflow:hidden;
+    overflow-wrap:anywhere;
+    text-align:left;
+}
+
+
+/* =========================================================
+   13. COURSE AREA
+========================================================= */
+
+.page[data-template="template-04"]
+.course-area{
+    width:100%;
+    min-width:0;
+    margin-top:1.5mm;
+    text-align:center;
+    font-family:"Times New Roman",serif;
+    font-size:13.5pt;
+    font-weight:600;
+    line-height:1.55;
+    color:#1c1a1f;
+    overflow:hidden;
+}
+
+.page[data-template="template-04"]
+.course-area > div{
+    width:100%;
+    margin:0;
+    padding:0;
+    white-space:normal;
+    overflow-wrap:anywhere;
+}
+
+.page[data-template="template-04"]
+#courseNameLabel,
+.page[data-template="template-04"]
+#courseCodeLabel{
+    color:#3b0f0f;
+    font-weight:700;
+    letter-spacing:.3px;
+}
+
+.page[data-template="template-04"]
+#previewCourseName,
+.page[data-template="template-04"]
+#previewCourseCode{
+    color:#166534;
+    font-weight:700;
+}
+
+
+/* =========================================================
+   14. SUBMITTED AREA
+========================================================= */
+
+.page[data-template="template-04"]
+.submitted-area{
+    position:relative;
+    width:100%;
+    min-width:0;
+    margin-top:18mm;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    column-gap:18mm;
+    flex:none;
+}
+
+
+/* =========================================================
+   15. DIAMOND DOUBLE DIVIDER
+========================================================= */
+
+.page[data-template="template-04"]
+.submitted-area::before,
+.page[data-template="template-04"]
+.submitted-area::after{
+    content:"";
+    position:absolute;
+    top:-2mm;
+    bottom:0;
+    width:.55mm;
+    border-radius:0;
+    z-index:3;
+    pointer-events:none;
+}
+
+/* Burgundy line */
+.page[data-template="template-04"]
+.submitted-area::before{
+    left:calc(50% - 2mm);
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(127,29,29,0) 0%,
+            #7f1d1d 12%,
+            #3b0f0f 50%,
+            #7f1d1d 88%,
+            rgba(127,29,29,0) 100%
+        );
+}
+
+/* Gold line */
+.page[data-template="template-04"]
+.submitted-area::after{
+    left:calc(50% + 2mm);
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(212,175,55,0) 0%,
+            #d4af37 12%,
+            #b8860b 50%,
+            #d4af37 88%,
+            rgba(212,175,55,0) 100%
+        );
+}
+
+
+/* =========================================================
+   16. SUBMIT COLUMN
+========================================================= */
+
+.page[data-template="template-04"]
+.submit-column{
+    min-width:0;
+    overflow:hidden;
+    padding-left:5mm;
+}
+
+.page[data-template="template-04"]
+.submit-column:first-child{
+    padding-left:5mm;
+}
+
+.page[data-template="template-04"]
+.submit-column:last-child{
+    padding-left:2mm;
+}
+
+
+/* =========================================================
+   17. SUBMITTED HEADING
+========================================================= */
+
+.page[data-template="template-04"]
+.submit-heading{
+    position:relative;
+    width:max-content;
+    max-width:100%;
+    margin:0 0 6mm;
+    padding:0 0 2.5mm;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:13pt;
+    font-weight:800;
+    font-style:italic;
+    line-height:1.25;
+    color:#3b0f0f;
+    letter-spacing:.6px;
+    white-space:normal;
+    overflow-wrap:break-word;
+}
+
+/* Burgundy + Gold underline */
+.page[data-template="template-04"]
+.submit-heading::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:20mm;
+    height:.8mm;
+    border-radius:0;
+    background:
+        linear-gradient(
+            90deg,
+            #7f1d1d 0%,
+            #7f1d1d 55%,
+            #d4af37 55%,
+            #d4af37 100%
+        );
+    box-shadow:0 0 3mm rgba(212,175,55,.30);
+}
+
+
+/* =========================================================
+   18. SUBMITTED INFORMATION
+========================================================= */
+
+.page[data-template="template-04"]
+.submit-info{
+    width:100%;
+    margin:0;
+    padding:0;
+    font-family:"Times New Roman",serif;
+    font-size:12.5pt;
+    font-weight:400;
+    line-height:1.48;
+    color:#221a1a;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:normal;
+}
+
+.page[data-template="template-04"]
+.submit-info span{
+    display:inline;
+}
+
+.page[data-template="template-04"]
+.vertical-line{
+    display:none !important;
+}
+
+
+/* =========================================================
+   19. DATE
+========================================================= */
+
+.page[data-template="template-04"]
+.date-area{
+    width:100%;
+    margin-top:auto;
+    padding-top:4mm;
+    text-align:center;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:13.5pt;
+    font-weight:700;
+    line-height:1.3;
+    color:#3b0f0f;
+    letter-spacing:.6px;
+    white-space:normal;
+}
+
+/* Burgundy-trimmed date pill */
+.page[data-template="template-04"]
+.date-value{
+    display:inline-block;
+    margin-left:5mm;
+    padding:1.6mm 6mm;
+    border-radius:1.2mm;
+    background:
+        linear-gradient(
+            135deg,
+            #fdfaf4 0%,
+            #f5fbf6 100%
+        );
+    border:.35mm solid #7f1d1d;
+    box-shadow:
+        0 1mm 3mm rgba(59,15,15,.10),
+        inset 0 0 0 .3mm rgba(212,175,55,.55);
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13.5pt;
+    font-weight:600;
+    color:#3b0f0f;
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   20. BENGALI MODE
+========================================================= */
+
+.page[data-template="template-04"].lang-bn
+.college-name{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:24pt;
+    line-height:1.35;
+    letter-spacing:0;
+}
+
+.page[data-template="template-04"].lang-bn
+.department{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:20pt;
+    line-height:1.35;
+}
+
+.page[data-template="template-04"].lang-bn
+.assignment-on{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:16pt;
+    line-height:1.35;
+    letter-spacing:0;
+}
+
+.page[data-template="template-04"].lang-bn
+.topic-label{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:14pt;
+    line-height:8.5mm;
+}
+
+.page[data-template="template-04"].lang-bn
+.topic-text{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13.5pt;
+    line-height:8.5mm;
+}
+
+.page[data-template="template-04"].lang-bn
+.course-area{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13.5pt;
+    line-height:1.55;
+}
+
+.page[data-template="template-04"].lang-bn
+.submit-heading{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:14pt;
+    line-height:1.35;
+}
+
+.page[data-template="template-04"].lang-bn
+.submit-info{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13.5pt;
+    line-height:1.55;
+}
+
+.page[data-template="template-04"].lang-bn
+.date-area{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:14pt;
+}
+
+.page[data-template="template-04"].lang-bn
+.date-value{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:14pt;
+}
+
+
+/* =========================================================
+   21. MOBILE PREVIEW
+========================================================= */
+
+@media(max-width:520px){
+
+    .page[data-template="template-04"]
+    .college-name{
+        font-size:23pt;
+    }
+
+    .page[data-template="template-04"]
+    .college-logo{
+        width:62mm;
+        height:62mm;
+        margin-top:5mm;
+        margin-bottom:4mm;
+    }
+
+    .page[data-template="template-04"]
+    .department{
+        font-size:19pt;
+    }
+
+    .page[data-template="template-04"]
+    .assignment-box{
+        margin-top:9mm;
+        padding-left:6mm;
+        padding-right:6mm;
+    }
+
+    .page[data-template="template-04"]
+    .submitted-area{
+        margin-top:17mm;
+        column-gap:17mm;
+    }
+
+    .page[data-template="template-04"]
+    .submit-column:first-child{
+        padding-left:5mm;
+    }
+
+    .page[data-template="template-04"]
+    .submit-column:last-child{
+        padding-left:2mm;
+    }
+}
+
+
+/* =========================================================
+   22. VERY SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px){
+
+    .page[data-template="template-04"]
+    .college-name{
+        font-size:22pt;
+    }
+
+    .page[data-template="template-04"]
+    .department{
+        font-size:18pt;
+    }
+
+    .page[data-template="template-04"]
+    .assignment-on{
+        font-size:15pt;
+    }
+
+    .page[data-template="template-04"]
+    .submit-heading{
+        font-size:12pt;
+    }
+
+    .page[data-template="template-04"]
+    .submit-info{
+        font-size:12pt;
+    }
+}
+
+
+/* =========================================================
+   23. PRINT / PDF
+========================================================= */
+
+@page{
+    size:A4;
+    margin:0;
+}
+
+@media print{
+
+    html,
+    body{
+        width:210mm;
+        height:297mm;
+        margin:0 !important;
+        padding:0 !important;
+        background:#fff !important;
+    }
+
+    .page[data-template="template-04"]{
+        width:210mm !important;
+        height:297mm !important;
+        margin:0 !important;
+        transform:none !important;
+        box-shadow:none !important;
+        overflow:hidden !important;
+        opacity:1 !important;
+        filter:none !important;
+        background:#fff !important;
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+    }
+
+    .page[data-template="template-04"]
+    .page-border{
+        display:none !important;
+        visibility:hidden !important;
+        opacity:0 !important;
+    }
+
+    .page[data-template="template-04"]
+    .college-name::before,
+    .page[data-template="template-04"]
+    .department::before{
+        content:none !important;
+        display:none !important;
+    }
+
+    .page[data-template="template-04"]
+    .college-name,
+    .page[data-template="template-04"]
+    .department{
+        border:none !important;
+        box-shadow:none !important;
+        background-color:transparent !important;
+    }
+
+    .page[data-template="template-04"]
+    .college-logo{
+        filter:none !important;
+    }
+
+    .page[data-template="template-04"]
+    .assignment-box{
+        box-shadow:0 0 0 .4mm #7f1d1d !important;
+    }
+}
