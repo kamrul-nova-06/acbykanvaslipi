@@ -1,9 +1,7 @@
 /* =========================================================
-   TEMPLATE 03
-   PREMIUM MODERN A4 ASSIGNMENT COVER
-   WHITE BACKGROUND
-   CSS ONLY DECORATION
-   NO border.png
+   TEMPLATE 03 — PREMIUM PROFESSIONAL EDITION
+   NAVY · GOLD · EMERALD
+   A4 ASSIGNMENT COVER · CSS ONLY
 ========================================================= */
 
 
@@ -13,18 +11,12 @@
 
 .page[data-template="template-03"]{
     position:relative;
-
     width:210mm;
     height:297mm;
-
     overflow:hidden;
-
     box-sizing:border-box;
-
     background:#ffffff;
-
-    color:#20212a;
-
+    color:#1a1f36;
     font-family:"Times New Roman",serif;
 }
 
@@ -35,71 +27,58 @@
 
 .page[data-template="template-03"] .page-border{
     display:none !important;
-
     visibility:hidden !important;
-
     opacity:0 !important;
 }
 
 
 /* =========================================================
-   03. PAGE DECORATION
+   03. PAGE DECORATION — PREMIUM FRAME
 ========================================================= */
 
-/* TOP LEFT COLOR SHAPE */
-
+/* TOP-LEFT — Deep navy arc */
 .page[data-template="template-03"]::before{
     content:"";
-
     position:absolute;
-
-    width:67mm;
-    height:67mm;
-
-    top:-36mm;
-    left:-36mm;
-
+    width:76mm;
+    height:76mm;
+    top:-42mm;
+    left:-42mm;
     border-radius:50%;
-
     background:
-        linear-gradient(
-            135deg,
-            #6d28d9 0%,
-            #8b5cf6 48%,
-            #a78bfa 100%
+        radial-gradient(
+            circle at 65% 65%,
+            #1e3a8a 0%,
+            #1e2a5e 55%,
+            #0f1738 100%
         );
-
+    box-shadow:
+        0 0 0 .8mm rgba(212,175,55,.35),
+        0 0 0 2.2mm rgba(212,175,55,.10);
     z-index:0;
-
     pointer-events:none;
 }
 
-
-/* TOP RIGHT COLOR SHAPE */
-
+/* TOP-RIGHT — Emerald arc */
 .page[data-template="template-03"]::after{
     content:"";
-
     position:absolute;
-
-    width:48mm;
-    height:48mm;
-
-    top:-24mm;
-    right:-22mm;
-
+    width:54mm;
+    height:54mm;
+    top:-30mm;
+    right:-26mm;
     border-radius:50%;
-
     background:
-        linear-gradient(
-            145deg,
-            #0f766e 0%,
-            #14b8a6 52%,
-            #2dd4bf 100%
+        radial-gradient(
+            circle at 35% 65%,
+            #10b981 0%,
+            #047857 55%,
+            #064e3b 100%
         );
-
+    box-shadow:
+        0 0 0 .8mm rgba(212,175,55,.35),
+        0 0 0 2.2mm rgba(212,175,55,.10);
     z-index:0;
-
     pointer-events:none;
 }
 
@@ -110,53 +89,36 @@
 
 .page[data-template="template-03"] .page-content{
     position:absolute;
-
-    top:13mm;
-    left:14mm;
-    right:14mm;
-    bottom:12mm;
-
+    top:14mm;
+    left:15mm;
+    right:15mm;
+    bottom:13mm;
     width:auto;
-
     z-index:2;
-
     display:flex;
-
     flex-direction:column;
-
     min-width:0;
-
     box-sizing:border-box;
 }
 
-
-/* Bottom soft decoration */
-
+/* Bottom soft decoration — golden aura */
 .page[data-template="template-03"]
 .page-content::before{
-
     content:"";
-
     position:absolute;
-
-    width:90mm;
-    height:90mm;
-
-    right:-52mm;
-    bottom:-55mm;
-
+    width:100mm;
+    height:100mm;
+    right:-56mm;
+    bottom:-60mm;
     border-radius:50%;
-
     background:
         radial-gradient(
             circle,
-            rgba(109,40,217,.13) 0%,
-            rgba(20,184,166,.07) 42%,
+            rgba(212,175,55,.14) 0%,
+            rgba(4,120,87,.06) 42%,
             transparent 72%
         );
-
     z-index:-1;
-
     pointer-events:none;
 }
 
@@ -166,64 +128,52 @@
 ========================================================= */
 
 .page[data-template="template-03"] .college-name{
-
     position:relative;
-
     width:100%;
-
-    margin:2mm 0 0;
-    padding:0;
-
+    margin:1mm 0 0;
+    padding:0 0 3mm;
     text-align:center;
-
-    font-family:"Playfair Display",
-                "Times New Roman",
-                serif;
-
+    font-family:"Playfair Display","Times New Roman",serif;
     font-size:23pt;
-
     font-weight:700;
-
-    line-height:1.2;
-
-    letter-spacing:.15px;
-
-    color:#312e81;
-
-    background:
-        linear-gradient(
-            90deg,
-            #312e81 0%,
-            #6d28d9 48%,
-            #0f766e 100%
-        );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-
+    line-height:1.22;
+    letter-spacing:.4px;
+    color:#0f1738;
+    background:none;
+    -webkit-text-fill-color:initial;
     white-space:normal;
-
     overflow-wrap:break-word;
-
     border:none !important;
-
     box-shadow:none !important;
 }
 
-
-/* IMPORTANT:
-   কোনো pseudo shape text-এর সাথে যাবে না
-*/
-
-.page[data-template="template-03"]
-.college-name::before,
+/* Golden underline accent under college name */
 .page[data-template="template-03"]
 .college-name::after{
+    content:"" !important;
+    display:block !important;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:42mm;
+    height:.7mm;
+    border-radius:2mm;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            #d4af37 18%,
+            #b8860b 50%,
+            #d4af37 82%,
+            transparent 100%
+        );
+    box-shadow:0 0 4mm rgba(212,175,55,.35);
+}
 
+.page[data-template="template-03"]
+.college-name::before{
     content:none !important;
-
     display:none !important;
 }
 
@@ -233,23 +183,15 @@
 ========================================================= */
 
 .page[data-template="template-03"] .college-logo{
-
     display:block;
-
-    width:60mm;
-    height:60mm;
-
+    width:58mm;
+    height:58mm;
     margin:6mm auto 4mm;
-
     object-fit:contain;
-
     flex:none;
-
     filter:
-        drop-shadow(
-            0 2.5mm 3mm
-            rgba(49,46,129,.13)
-        );
+        drop-shadow(0 2mm 3mm rgba(15,23,56,.14))
+        drop-shadow(0 0 6mm rgba(212,175,55,.10));
 }
 
 
@@ -258,63 +200,50 @@
 ========================================================= */
 
 .page[data-template="template-03"] .department{
-
     position:relative;
-
     width:100%;
-
     margin:0;
-    padding:0;
-
+    padding:0 0 2mm;
     text-align:center;
-
-    font-family:
-        "Roboto Condensed",
-        Arial,
-        sans-serif;
-
+    font-family:"Roboto Condensed",Arial,sans-serif;
     font-size:19pt;
-
     font-weight:800;
-
-    line-height:1.2;
-
-    letter-spacing:.15px;
-
-    color:#0f766e;
-
-    background:
-        linear-gradient(
-            90deg,
-            #115e59 0%,
-            #0f766e 45%,
-            #14b8a6 100%
-        );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-
+    line-height:1.22;
+    letter-spacing:.6px;
+    color:#047857;
+    background:none;
+    -webkit-text-fill-color:initial;
+    text-transform:uppercase;
     white-space:normal;
-
     overflow-wrap:break-word;
-
     border:none !important;
-
     box-shadow:none !important;
 }
 
-
-/* No shape under department */
-
-.page[data-template="template-03"]
-.department::before,
+/* Small emerald dot accent */
 .page[data-template="template-03"]
 .department::after{
+    content:"" !important;
+    display:block !important;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:6mm;
+    height:.55mm;
+    border-radius:2mm;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #059669,
+            transparent
+        );
+}
 
+.page[data-template="template-03"]
+.department::before{
     content:none !important;
-
     display:none !important;
 }
 
@@ -324,93 +253,61 @@
 ========================================================= */
 
 .page[data-template="template-03"] .assignment-box{
-
     position:relative;
-
     width:100%;
-
     margin-top:10mm;
-
-    padding:6mm 6mm 5.5mm;
-
+    padding:7mm 7mm 6mm;
     box-sizing:border-box;
-
     flex:none;
-
     overflow:hidden;
-
     background:
         linear-gradient(
             135deg,
             #ffffff 0%,
-            #faf8ff 48%,
-            #f2fffc 100%
+            #fbfaf5 50%,
+            #f4fbf8 100%
         );
-
-    border:1px solid rgba(79,70,229,.20);
-
-    border-radius:5mm;
-
+    border:.4mm solid #0f1738;
+    border-radius:2.5mm;
     box-shadow:
-        0 3mm 9mm
-        rgba(49,46,129,.09);
+        0 2mm 6mm rgba(15,23,56,.10),
+        inset 0 0 0 .3mm rgba(212,175,55,.35);
 }
 
-
-/* Top gradient line */
-
+/* Top golden accent bar */
 .page[data-template="template-03"]
 .assignment-box::before{
-
     content:"";
-
     position:absolute;
-
     top:0;
-
-    left:24mm;
-    right:24mm;
-
-    height:1.15mm;
-
-    border-radius:
-        0 0 2mm 2mm;
-
+    left:0;
+    right:0;
+    height:1.1mm;
     background:
         linear-gradient(
             90deg,
-            #7c3aed,
-            #8b5cf6,
-            #14b8a6
+            #0f1738 0%,
+            #1e3a8a 20%,
+            #d4af37 50%,
+            #047857 80%,
+            #0f1738 100%
         );
-
     z-index:2;
 }
 
-
-/* Corner decoration */
-
+/* Corner gold seal */
 .page[data-template="template-03"]
 .assignment-box::after{
-
     content:"";
-
     position:absolute;
-
-    width:17mm;
-    height:17mm;
-
-    top:-8mm;
-    right:-8mm;
-
-    border-radius:50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(124,58,237,.13),
-            rgba(20,184,166,.10)
-        );
+    width:9mm;
+    height:9mm;
+    top:2.2mm;
+    right:2.2mm;
+    border-top:.45mm solid #d4af37;
+    border-right:.45mm solid #d4af37;
+    border-radius:0 1mm 0 0;
+    opacity:.85;
 }
 
 
@@ -420,35 +317,38 @@
 
 .page[data-template="template-03"]
 .assignment-on{
-
     position:relative;
-
     z-index:3;
-
     width:100%;
-
-    margin:0 0 4mm;
-
-    padding:0;
-
+    margin:0 0 5mm;
+    padding:0 0 2mm;
     text-align:center;
-
-    font-family:
-        "Roboto Condensed",
-        Arial,
-        sans-serif;
-
+    font-family:"Roboto Condensed",Arial,sans-serif;
     font-size:15pt;
-
     font-weight:800;
-
     line-height:1.25;
-
-    color:#4c1d95;
-
-    letter-spacing:.25px;
-
+    color:#0f1738;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
     white-space:normal;
+}
+
+/* Decorative line under heading */
+.page[data-template="template-03"]
+.assignment-on::after{
+    content:"";
+    display:block;
+    margin:2.5mm auto 0;
+    width:22mm;
+    height:.5mm;
+    border-radius:2mm;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
 }
 
 
@@ -457,19 +357,11 @@
 ========================================================= */
 
 .page[data-template="template-03"] .topic-row{
-
     width:100%;
-
     min-width:0;
-
     display:grid;
-
-    grid-template-columns:
-        auto
-        minmax(0,1fr);
-
-    column-gap:3mm;
-
+    grid-template-columns:auto minmax(0,1fr);
+    column-gap:3.5mm;
     align-items:start;
 }
 
@@ -479,23 +371,14 @@
 ========================================================= */
 
 .page[data-template="template-03"] .topic-label{
-
     min-width:max-content;
-
     padding-top:.3mm;
-
-    font-family:
-        "Times New Roman",
-        serif;
-
+    font-family:"Times New Roman",serif;
     font-size:13.5pt;
-
     font-weight:700;
-
     line-height:8mm;
-
-    color:#312e81;
-
+    color:#0f1738;
+    letter-spacing:.3px;
     white-space:nowrap;
 }
 
@@ -506,120 +389,74 @@
 
 .page[data-template="template-03"]
 .topic-writing-area{
-
     position:relative;
-
     width:100%;
-
     min-width:0;
-
     height:17mm;
-
     overflow:hidden;
-
     box-sizing:border-box;
 }
 
-
 /* Dotted line 01 */
-
 .page[data-template="template-03"]
 .topic-writing-area::before{
-
     content:"";
-
     position:absolute;
-
     left:0;
     right:0;
-
     top:8.2mm;
-
-    height:1px;
-
+    height:.25mm;
     background:
         repeating-linear-gradient(
             90deg,
-            #b8b4d2 0,
-            #b8b4d2 1.2px,
+            #c9bfa3 0,
+            #c9bfa3 1.2px,
             transparent 1.2px,
             transparent 3.6px
         );
-
-    opacity:.8;
-
+    opacity:.9;
     pointer-events:none;
 }
-
 
 /* Dotted line 02 */
-
 .page[data-template="template-03"]
 .topic-writing-area::after{
-
     content:"";
-
     position:absolute;
-
     left:0;
     right:0;
-
     top:16.1mm;
-
-    height:1px;
-
+    height:.25mm;
     background:
         repeating-linear-gradient(
             90deg,
-            #b8b4d2 0,
-            #b8b4d2 1.2px,
+            #c9bfa3 0,
+            #c9bfa3 1.2px,
             transparent 1.2px,
             transparent 3.6px
         );
-
-    opacity:.8;
-
+    opacity:.9;
     pointer-events:none;
 }
 
-
 /* Topic text */
-
 .page[data-template="template-03"]
 .topic-text{
-
     position:relative;
-
     z-index:3;
-
     width:100%;
-
     height:17mm;
-
     margin:0;
     padding:0;
-
     background:transparent;
-
-    color:#34343d;
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    color:#1f2540;
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:13pt;
-
-    font-weight:400;
-
+    font-weight:500;
     line-height:8mm;
-
     white-space:pre-wrap;
-
     overflow:hidden;
-
     overflow-wrap:anywhere;
-
     text-align:left;
 }
 
@@ -630,67 +467,41 @@
 
 .page[data-template="template-03"]
 .course-area{
-
     width:100%;
-
     min-width:0;
-
-    margin-top:1mm;
-
+    margin-top:1.5mm;
     text-align:center;
-
-    font-family:
-        "Times New Roman",
-        serif;
-
+    font-family:"Times New Roman",serif;
     font-size:13.5pt;
-
     font-weight:600;
-
-    line-height:1.5;
-
-    color:#29294b;
-
+    line-height:1.55;
+    color:#1a1f36;
     overflow:hidden;
 }
 
-
 .page[data-template="template-03"]
 .course-area > div{
-
     width:100%;
-
     margin:0;
     padding:0;
-
     white-space:normal;
-
     overflow-wrap:anywhere;
 }
-
-
-/* Course labels */
 
 .page[data-template="template-03"]
 #courseNameLabel,
 .page[data-template="template-03"]
 #courseCodeLabel{
-
-    color:#6d28d9;
-
+    color:#0f1738;
     font-weight:700;
+    letter-spacing:.3px;
 }
-
-
-/* Course values */
 
 .page[data-template="template-03"]
 #previewCourseName,
 .page[data-template="template-03"]
 #previewCourseCode{
-
-    color:#25234a;
-
+    color:#047857;
     font-weight:700;
 }
 
@@ -701,73 +512,63 @@
 
 .page[data-template="template-03"]
 .submitted-area{
-
     position:relative;
-
     width:100%;
-
     min-width:0;
-
     margin-top:18mm;
-
     display:grid;
-
-    grid-template-columns:
-        minmax(0,1fr)
-        minmax(0,1fr);
-
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
     column-gap:18mm;
-
     flex:none;
 }
 
 
 /* =========================================================
-   15. COLORFUL DOUBLE DIVIDER
+   15. COLORFUL DOUBLE DIVIDER — GOLD + EMERALD
 ========================================================= */
 
 .page[data-template="template-03"]
 .submitted-area::before,
 .page[data-template="template-03"]
 .submitted-area::after{
-
     content:"";
-
     position:absolute;
-
     top:-2mm;
-
     bottom:0;
-
-    width:.45mm;
-
+    width:.5mm;
     border-radius:2mm;
-
-    background:
-        linear-gradient(
-            to bottom,
-            #7c3aed 0%,
-            #8b5cf6 45%,
-            #14b8a6 100%
-        );
-
     z-index:3;
-
     pointer-events:none;
 }
 
-
+/* Golden line */
 .page[data-template="template-03"]
 .submitted-area::before{
-
     left:calc(50% - 1.8mm);
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(212,175,55,0) 0%,
+            #d4af37 12%,
+            #b8860b 50%,
+            #d4af37 88%,
+            rgba(212,175,55,0) 100%
+        );
 }
 
-
+/* Emerald line */
 .page[data-template="template-03"]
 .submitted-area::after{
-
     left:calc(50% + 1.8mm);
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(4,120,87,0) 0%,
+            #047857 12%,
+            #065f46 50%,
+            #047857 88%,
+            rgba(4,120,87,0) 100%
+        );
 }
 
 
@@ -777,25 +578,18 @@
 
 .page[data-template="template-03"]
 .submit-column{
-
     min-width:0;
-
     overflow:hidden;
-
     padding-left:5mm;
 }
-
 
 .page[data-template="template-03"]
 .submit-column:first-child{
-
     padding-left:5mm;
 }
 
-
 .page[data-template="template-03"]
 .submit-column:last-child{
-
     padding-left:2mm;
 }
 
@@ -806,63 +600,39 @@
 
 .page[data-template="template-03"]
 .submit-heading{
-
     position:relative;
-
     width:max-content;
-
     max-width:100%;
-
     margin:0 0 6mm;
-
     padding:0 0 2.3mm;
-
-    font-family:
-        "Roboto Condensed",
-        Arial,
-        sans-serif;
-
+    font-family:"Roboto Condensed",Arial,sans-serif;
     font-size:13pt;
-
     font-weight:800;
-
     font-style:italic;
-
     line-height:1.25;
-
-    color:#5b21b6;
-
+    color:#0f1738;
+    letter-spacing:.5px;
     white-space:normal;
-
     overflow-wrap:break-word;
 }
 
-
-/* Heading underline */
-
+/* Golden underline */
 .page[data-template="template-03"]
 .submit-heading::after{
-
     content:"";
-
     position:absolute;
-
     left:0;
-
     bottom:0;
-
     width:19mm;
-
-    height:.8mm;
-
+    height:.75mm;
     border-radius:2mm;
-
     background:
         linear-gradient(
             90deg,
-            #7c3aed,
-            #14b8a6
+            #d4af37 0%,
+            #047857 100%
         );
+    box-shadow:0 0 3mm rgba(212,175,55,.30);
 }
 
 
@@ -872,44 +642,26 @@
 
 .page[data-template="template-03"]
 .submit-info{
-
     width:100%;
-
     margin:0;
     padding:0;
-
-    font-family:
-        "Times New Roman",
-        serif;
-
+    font-family:"Times New Roman",serif;
     font-size:12.5pt;
-
     font-weight:400;
-
-    line-height:1.42;
-
-    color:#292934;
-
+    line-height:1.48;
+    color:#1f2540;
     white-space:normal;
-
     overflow-wrap:anywhere;
-
     word-break:normal;
 }
 
-
 .page[data-template="template-03"]
 .submit-info span{
-
     display:inline;
 }
 
-
-/* Old HTML divider OFF */
-
 .page[data-template="template-03"]
 .vertical-line{
-
     display:none !important;
 }
 
@@ -920,70 +672,40 @@
 
 .page[data-template="template-03"]
 .date-area{
-
     width:100%;
-
     margin-top:auto;
-
-    padding-top:3mm;
-
+    padding-top:4mm;
     text-align:center;
-
-    font-family:
-        "Roboto Condensed",
-        Arial,
-        sans-serif;
-
+    font-family:"Roboto Condensed",Arial,sans-serif;
     font-size:13.5pt;
-
     font-weight:700;
-
     line-height:1.3;
-
-    color:#51488a;
-
+    color:#0f1738;
+    letter-spacing:.5px;
     white-space:normal;
 }
 
-
-/* Date pill */
-
+/* Gold-trimmed date pill */
 .page[data-template="template-03"]
 .date-value{
-
     display:inline-block;
-
     margin-left:5mm;
-
-    padding:1.4mm 5mm;
-
+    padding:1.5mm 5.5mm;
     border-radius:7mm;
-
     background:
         linear-gradient(
             135deg,
-            #f5f1ff,
-            #edfffa
+            #fdfbf3 0%,
+            #f4fbf8 100%
         );
-
-    border:1px solid
-        rgba(91,33,182,.16);
-
+    border:.35mm solid #d4af37;
     box-shadow:
-        0 1mm 3mm
-        rgba(73,59,130,.07);
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+        0 1mm 3mm rgba(15,23,56,.08),
+        inset 0 0 0 .3mm rgba(4,120,87,.15);
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:13.5pt;
-
     font-weight:600;
-
-    color:#393365;
-
+    color:#0f1738;
     white-space:nowrap;
 }
 
@@ -994,138 +716,71 @@
 
 .page[data-template="template-03"].lang-bn
 .college-name{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:24pt;
-
     line-height:1.35;
-
     letter-spacing:0;
 }
 
-
 .page[data-template="template-03"].lang-bn
 .department{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:20pt;
-
     line-height:1.35;
 }
-
 
 .page[data-template="template-03"].lang-bn
 .assignment-on{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:16pt;
-
     line-height:1.35;
+    letter-spacing:0;
 }
-
 
 .page[data-template="template-03"].lang-bn
 .topic-label{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:14pt;
-
     line-height:8.5mm;
 }
-
 
 .page[data-template="template-03"].lang-bn
 .topic-text{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:13.5pt;
-
     line-height:8.5mm;
 }
 
-
 .page[data-template="template-03"].lang-bn
 .course-area{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:13.5pt;
-
     line-height:1.55;
 }
-
 
 .page[data-template="template-03"].lang-bn
 .submit-heading{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:14pt;
-
     line-height:1.35;
 }
 
-
 .page[data-template="template-03"].lang-bn
 .submit-info{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:13.5pt;
-
     line-height:1.55;
 }
 
-
 .page[data-template="template-03"].lang-bn
 .date-area{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:14pt;
 }
 
-
 .page[data-template="template-03"].lang-bn
 .date-value{
-
-    font-family:
-        "Hind Siliguri",
-        "Noto Sans Bengali",
-        sans-serif;
-
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:14pt;
 }
 
@@ -1138,58 +793,42 @@
 
     .page[data-template="template-03"]
     .college-name{
-
         font-size:23pt;
     }
 
-
     .page[data-template="template-03"]
     .college-logo{
-
         width:62mm;
         height:62mm;
-
         margin-top:5mm;
         margin-bottom:4mm;
     }
 
-
     .page[data-template="template-03"]
     .department{
-
         font-size:19pt;
     }
 
-
     .page[data-template="template-03"]
     .assignment-box{
-
         margin-top:9mm;
-
-        padding-left:5mm;
-        padding-right:5mm;
+        padding-left:6mm;
+        padding-right:6mm;
     }
-
 
     .page[data-template="template-03"]
     .submitted-area{
-
         margin-top:17mm;
-
         column-gap:17mm;
     }
 
-
     .page[data-template="template-03"]
     .submit-column:first-child{
-
         padding-left:5mm;
     }
 
-
     .page[data-template="template-03"]
     .submit-column:last-child{
-
         padding-left:2mm;
     }
 }
@@ -1203,35 +842,26 @@
 
     .page[data-template="template-03"]
     .college-name{
-
         font-size:22pt;
     }
 
-
     .page[data-template="template-03"]
     .department{
-
         font-size:18pt;
     }
 
-
     .page[data-template="template-03"]
     .assignment-on{
-
         font-size:15pt;
     }
 
-
     .page[data-template="template-03"]
     .submit-heading{
-
         font-size:12pt;
     }
 
-
     .page[data-template="template-03"]
     .submit-info{
-
         font-size:12pt;
     }
 }
@@ -1242,103 +872,66 @@
 ========================================================= */
 
 @page{
-
     size:A4;
-
     margin:0;
 }
-
 
 @media print{
 
     html,
     body{
-
         width:210mm;
         height:297mm;
-
         margin:0 !important;
         padding:0 !important;
-
         background:#fff !important;
     }
-
 
     .page[data-template="template-03"]{
-
         width:210mm !important;
         height:297mm !important;
-
         margin:0 !important;
-
         transform:none !important;
-
         box-shadow:none !important;
-
         overflow:hidden !important;
-
         opacity:1 !important;
-
         filter:none !important;
-
         background:#fff !important;
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
     }
-
 
     .page[data-template="template-03"]
     .page-border{
-
         display:none !important;
-
         visibility:hidden !important;
-
         opacity:0 !important;
     }
-
 
     .page[data-template="template-03"]
     .college-name::before,
     .page[data-template="template-03"]
-    .college-name::after,
-    .page[data-template="template-03"]
-    .department::before,
-    .page[data-template="template-03"]
-    .department::after{
-
+    .department::before{
         content:none !important;
-
         display:none !important;
     }
-
 
     .page[data-template="template-03"]
     .college-name,
     .page[data-template="template-03"]
     .department{
-
         border:none !important;
-
         box-shadow:none !important;
-    }
-
-
-    .page[data-template="template-03"]
-    .college-name{
-
         background-color:transparent !important;
     }
-
-
-    .page[data-template="template-03"]
-    .department{
-
-        background-color:transparent !important;
-    }
-
 
     .page[data-template="template-03"]
     .college-logo{
-
         filter:none !important;
+    }
+
+    .page[data-template="template-03"]
+    .assignment-box{
+        box-shadow:0 0 0 .4mm #0f1738 !important;
     }
 }
