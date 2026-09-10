@@ -3,24 +3,33 @@
         "id": "template-01",
         "css": "template-01.css",
         "preview": "template-01.jpg",
-
         "university": "assets/university.png",
         "border": "assets/border.png",
-
-        "name": "Classic Green",
-        "nameBn": "ক্লাসিক গ্রিন",
-        "description": "Original Design",
-        "descriptionBn": "মূল ডিজাইন"
+        "name": "Template 01",
+        "nameBn": "টেমপ্লেট ০১",
+        "description": "Classic Assignment Cover",
+        "descriptionBn": "ক্লাসিক অ্যাসাইনমেন্ট কভার"
     },
-
     {
         "id": "template-02",
         "css": "template-02.css",
         "preview": "template-02.jpg",
-
-        "name": "Modern",
-        "nameBn": "মডার্ন",
-        "description": "Modern Assignment Cover",
-        "descriptionBn": "আধুনিক অ্যাসাইনমেন্ট কভার"
+        "university": "assets/university.png",
+        "border": "",
+        "name": "Template 02",
+        "nameBn": "টেমপ্লেট ০২",
+        "description": "Modern Colorful Assignment Cover",
+        "descriptionBn": "আধুনিক রঙিন অ্যাসাইনমেন্ট কভার"
+    },
+    {
+        "id": "template-03",
+        "css": "template-03.css",
+        "preview": "template-03.jpg",
+        "university": "assets/university.png",
+        "border": "",
+        "name": "Template 03",
+        "nameBn": "টেমপ্লেট ০৩",
+        "description": "Premium Modern Assignment Cover",
+        "descriptionBn": "প্রিমিয়াম আধুনিক অ্যাসাইনমেন্ট কভার"
     }
 ]
