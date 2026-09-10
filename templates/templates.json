@@ -32,4 +32,15 @@
         "description": "Premium Modern Assignment Cover",
         "descriptionBn": "প্রিমিয়াম আধুনিক অ্যাসাইনমেন্ট কভার"
     }
+        {
+        "id": "template-04",
+        "css": "template-04.css",
+        "preview": "template-04.jpg",
+        "university": "assets/university.png",
+        "border": "",
+        "name": "Template 04",
+        "nameBn": "টেমপ্লেট ০৪",
+        "description": "Premium professional Edition Cover",
+        "descriptionBn": "প্রিমিয়াম প্রোফেশনাল এডিশন কভার"
+        }
 ]
