@@ -65,7 +65,7 @@
         "description": "Midnight Pearl Luxury",
         "descriptionBn": "মিডনাইট পার্ল লাক্সারি"
         },
-            {
+        {
         "id": "template-07",
         "css": "template-07.css",
         "preview": "template-07.jpg",
@@ -75,5 +75,16 @@
         "nameBn": "টেমপ্লেট ০৭",
         "description": "Amber onyx prestige",
         "descriptionBn": "অ্যাম্বার অনিক্সের প্রতিপত্তি"
+        },
+        {
+        "id": "template-08",
+        "css": "template-08.css",
+        "preview": "template-08.jpg",
+        "university": "assets/university.png",
+        "border": "",
+        "name": "Template 08",
+        "nameBn": "টেমপ্লেট ০৮",
+        "description": "Crimson Ivory Grace ",
+        "descriptionBn": "ক্রিমসন আইভরি সৌন্দর্য"
         }
 ]
