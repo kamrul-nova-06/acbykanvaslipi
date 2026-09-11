@@ -42,5 +42,27 @@
         "nameBn": "টেমপ্লেট ০৪",
         "description": "Premium professional Edition Cover",
         "descriptionBn": "প্রিমিয়াম প্রোফেশনাল এডিশন কভার"
+        },
+        {
+        "id": "template-05",
+        "css": "template-05.css",
+        "preview": "template-05.jpg",
+        "university": "assets/university.png",
+        "border": "",
+        "name": "Template 05",
+        "nameBn": "টেমপ্লেট ০৫",
+        "description": "Teal Rose Elegance",
+        "descriptionBn": "টিল রোজ এলিগেন্স"
+        },
+        {
+        "id": "template-06",
+        "css": "template-06.css",
+        "preview": "template-06.jpg",
+        "university": "assets/university.png",
+        "border": "",
+        "name": "Template 06",
+        "nameBn": "টেমপ্লেট ০৬",
+        "description": "Premium professional Edition Cover",
+        "descriptionBn": "প্রিমিয়াম প্রোফেশনাল এডিশন কভার"
         }
 ]
