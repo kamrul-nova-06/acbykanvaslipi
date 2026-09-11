@@ -1,0 +1,1062 @@
+/* =========================================================
+   TEMPLATE 08 — CRIMSON IVORY GRACE
+   UNIQUE: CIRCULAR BADGE + DIAGONAL SPLIT
+   CRIMSON · IVORY · CHARCOAL
+   PRINT-SAFE DOTTED LINES (ENHANCED)
+========================================================= */
+
+
+/* =========================================================
+   01. A4 PAGE
+========================================================= */
+
+.page[data-template="template-08"]{
+    position:relative;
+    width:210mm;
+    height:297mm;
+    overflow:hidden;
+    box-sizing:border-box;
+    background:#fffdfb;
+    color:#1a1414;
+    font-family:"Times New Roman",serif;
+}
+
+
+/* =========================================================
+   02. BORDER ASSET OFF
+========================================================= */
+
+.page[data-template="template-08"] .page-border{
+    display:none !important;
+    visibility:hidden !important;
+    opacity:0 !important;
+}
+
+
+/* =========================================================
+   03. PAGE DECORATION — DIAGONAL SPLIT SIGNATURE
+========================================================= */
+
+/* TOP-LEFT DIAGONAL CRIMSON SLAB */
+.page[data-template="template-08"]::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:62mm;
+    background:
+        linear-gradient(
+            135deg,
+            #7f1d1d 0%,
+            #991b1b 42%,
+            #b91c1c 100%
+        );
+    clip-path:polygon(
+        0 0,
+        100% 0,
+        100% 40%,
+        0 100%
+    );
+    z-index:0;
+    pointer-events:none;
+    box-shadow:0 2mm 5mm rgba(127,29,29,.18);
+}
+
+/* BOTTOM-RIGHT DIAGONAL CHARCOAL SLAB */
+.page[data-template="template-08"]::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:52mm;
+    background:
+        linear-gradient(
+            315deg,
+            #0c0a09 0%,
+            #1c1917 55%,
+            #292524 100%
+        );
+    clip-path:polygon(
+        100% 100%,
+        0 100%,
+        0 60%,
+        100% 0
+    );
+    z-index:0;
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   04. PAGE CONTENT
+========================================================= */
+
+.page[data-template="template-08"] .page-content{
+    position:absolute;
+    top:11mm;
+    left:14mm;
+    right:14mm;
+    bottom:11mm;
+    width:auto;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    box-sizing:border-box;
+}
+
+/* IVORY inner frame (safe zone) */
+.page[data-template="template-08"]
+.page-content::before{
+    content:"";
+    position:absolute;
+    inset:-3mm;
+    border:.4mm solid rgba(255,255,255,.55);
+    border-radius:1.5mm;
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* Small ivory diamond at top center */
+.page[data-template="template-08"]
+.page-content::after{
+    content:"";
+    position:absolute;
+    top:-5.5mm;
+    left:50%;
+    transform:translateX(-50%) rotate(45deg);
+    width:4mm;
+    height:4mm;
+    background:#fffdfb;
+    box-shadow:
+        0 0 0 .55mm #7f1d1d,
+        0 0 0 1.1mm #fffdfb,
+        0 0 0 1.6mm rgba(127,29,29,.35);
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   05. COLLEGE NAME — CREAM TEXT ON CRIMSON
+========================================================= */
+
+.page[data-template="template-08"] .college-name{
+    position:relative;
+    width:100%;
+    margin:2mm 0 0;
+    padding:1mm 8mm 3.5mm;
+    text-align:center;
+    font-family:"Playfair Display","Times New Roman",serif;
+    font-size:22pt;
+    font-weight:700;
+    line-height:1.22;
+    letter-spacing:.6px;
+    color:#fffbeb;
+    background:none;
+    -webkit-text-fill-color:#fffbeb;
+    text-shadow:
+        0 1mm 2.5mm rgba(0,0,0,.35),
+        0 0 8mm rgba(255,251,235,.15);
+    white-space:normal;
+    overflow-wrap:break-word;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+/* Ivory underline with crimson center dot */
+.page[data-template="template-08"]
+.college-name::after{
+    content:"" !important;
+    display:block !important;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:52mm;
+    height:.9mm;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            #fffbeb 15%,
+            #fffbeb 42%,
+            #fbbf24 42%,
+            #fbbf24 58%,
+            #fffbeb 58%,
+            #fffbeb 85%,
+            transparent 100%
+        );
+    border-radius:1mm;
+    box-shadow:
+        0 .6mm 0 rgba(127,29,29,.55),
+        0 0 4mm rgba(255,251,235,.45);
+}
+
+.page[data-template="template-08"]
+.college-name::before{
+    content:none !important;
+    display:none !important;
+}
+
+
+/* =========================================================
+   06. UNIVERSITY LOGO — IVORY CIRCULAR BADGE
+========================================================= */
+
+.page[data-template="template-08"] .college-logo{
+    display:block;
+    width:50mm;
+    height:50mm;
+    margin:9mm auto 4mm;
+    object-fit:contain;
+    flex:none;
+    padding:2.5mm;
+    background:
+        radial-gradient(
+            circle at 40% 35%,
+            #ffffff 0%,
+            #fffbeb 60%,
+            #fef3c7 100%
+        );
+    border-radius:50%;
+    box-shadow:
+        0 0 0 .6mm #7f1d1d,
+        0 0 0 2mm #fffbeb,
+        0 0 0 2.7mm rgba(127,29,29,.55),
+        0 3mm 8mm rgba(127,29,29,.18);
+    filter:none;
+}
+
+
+/* =========================================================
+   07. DEPARTMENT — CHARCOAL ON IVORY
+========================================================= */
+
+.page[data-template="template-08"] .department{
+    position:relative;
+    width:100%;
+    margin:0;
+    padding:0 0 3mm;
+    text-align:center;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:17.5pt;
+    font-weight:800;
+    line-height:1.22;
+    letter-spacing:1.1px;
+    color:#0c0a09;
+    background:none;
+    -webkit-text-fill-color:#0c0a09;
+    text-transform:uppercase;
+    white-space:normal;
+    overflow-wrap:break-word;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+/* Crimson + Charcoal double bars */
+.page[data-template="template-08"]
+.department::after{
+    content:"" !important;
+    display:block !important;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:28mm;
+    height:1.1mm;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            #7f1d1d 15%,
+            #7f1d1d 45%,
+            transparent 45%,
+            transparent 55%,
+            #0c0a09 55%,
+            #0c0a09 85%,
+            transparent 100%
+        );
+}
+
+.page[data-template="template-08"]
+.department::before{
+    content:none !important;
+    display:none !important;
+}
+
+
+/* =========================================================
+   08. ASSIGNMENT BOX — ELEVATED IVORY CARD
+========================================================= */
+
+.page[data-template="template-08"] .assignment-box{
+    position:relative;
+    width:100%;
+    margin-top:10mm;
+    padding:7mm 8mm 6mm;
+    box-sizing:border-box;
+    flex:none;
+    overflow:visible;
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fffdfb 50%,
+            #fef7f0 100%
+        );
+    border:none;
+    border-radius:2.5mm;
+    box-shadow:
+        0 3mm 10mm rgba(127,29,29,.14),
+        0 0 0 .35mm rgba(127,29,29,.25),
+        inset 0 0 0 3mm #ffffff,
+        inset 0 0 0 3.35mm rgba(127,29,29,.18);
+}
+
+/* Crimson top tab */
+.page[data-template="template-08"]
+.assignment-box::before{
+    content:"ASSIGNMENT";
+    position:absolute;
+    top:-2.5mm;
+    left:50%;
+    transform:translateX(-50%);
+    padding:1.2mm 7mm;
+    background:
+        linear-gradient(
+            135deg,
+            #7f1d1d 0%,
+            #b91c1c 100%
+        );
+    color:#fffbeb;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:8pt;
+    font-weight:800;
+    letter-spacing:2.5px;
+    border-radius:1mm;
+    box-shadow:0 1.5mm 4mm rgba(127,29,29,.35);
+    z-index:4;
+    white-space:nowrap;
+}
+
+/* Ivory corner accent */
+.page[data-template="template-08"]
+.assignment-box::after{
+    content:"";
+    position:absolute;
+    width:10mm;
+    height:10mm;
+    bottom:-1mm;
+    right:-1mm;
+    border-bottom:.7mm solid #7f1d1d;
+    border-right:.7mm solid #7f1d1d;
+    border-radius:0 0 1.5mm 0;
+    opacity:.55;
+}
+
+
+/* =========================================================
+   09. ASSIGNMENT ON — with crimson cap marks
+========================================================= */
+
+.page[data-template="template-08"]
+.assignment-on{
+    position:relative;
+    z-index:3;
+    width:100%;
+    margin:0 0 5mm;
+    padding:0 0 2.5mm;
+    text-align:center;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:14pt;
+    font-weight:800;
+    line-height:1.28;
+    color:#7f1d1d;
+    letter-spacing:2.4px;
+    text-transform:uppercase;
+    white-space:normal;
+}
+
+.page[data-template="template-08"]
+.assignment-on::after{
+    content:"";
+    display:block;
+    margin:2.5mm auto 0;
+    width:30mm;
+    height:.55mm;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            #7f1d1d 18%,
+            #fbbf24 50%,
+            #7f1d1d 82%,
+            transparent 100%
+        );
+    border-radius:2mm;
+}
+
+
+/* =========================================================
+   10. TOPIC ROW — WITH NUMBERED BADGE
+========================================================= */
+
+.page[data-template="template-08"] .topic-row{
+    width:100%;
+    min-width:0;
+    display:grid;
+    grid-template-columns:auto minmax(0,1fr);
+    column-gap:4mm;
+    align-items:start;
+}
+
+
+/* =========================================================
+   11. TOPIC LABEL — with crimson numbered badge
+========================================================= */
+
+.page[data-template="template-08"] .topic-label{
+    position:relative;
+    min-width:max-content;
+    padding:.5mm 0 .5mm 8mm;
+    font-family:"Times New Roman",serif;
+    font-size:13.5pt;
+    font-weight:700;
+    line-height:8mm;
+    color:#0c0a09;
+    letter-spacing:.5px;
+    white-space:nowrap;
+}
+
+/* Crimson number badge "01" */
+.page[data-template="template-08"]
+.topic-label::before{
+    content:"01";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:6mm;
+    height:6mm;
+    line-height:6mm;
+    text-align:center;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:7.5pt;
+    font-weight:800;
+    color:#fffbeb;
+    background:
+        linear-gradient(
+            135deg,
+            #7f1d1d,
+            #b91c1c
+        );
+    border-radius:50%;
+    box-shadow:0 0 0 .4mm #fffbeb, 0 0 0 .75mm rgba(127,29,29,.55);
+    letter-spacing:0;
+}
+
+
+/* =========================================================
+   12. TOPIC WRITING — ENHANCED PRINT-SAFE DOTTED LINES
+========================================================= */
+
+.page[data-template="template-08"]
+.topic-writing-area{
+    position:relative;
+    width:100%;
+    min-width:0;
+    height:17mm;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+/* Real dotted lines — two layers, forced print */
+.page[data-template="template-08"]
+.topic-writing-area::before{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:8.2mm;
+    height:.4mm;
+    background-image:
+        repeating-linear-gradient(
+            to right,
+            #8b7a6a 0,
+            #8b7a6a 2.2px,
+            transparent 2.2px,
+            transparent 6.6px
+        );
+    background-repeat:repeat-x;
+    background-size:100% 100%;
+    pointer-events:none;
+    z-index:2;
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+}
+
+.page[data-template="template-08"]
+.topic-writing-area::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:16.1mm;
+    height:.4mm;
+    background-image:
+        repeating-linear-gradient(
+            to right,
+            #8b7a6a 0,
+            #8b7a6a 2.2px,
+            transparent 2.2px,
+            transparent 6.6px
+        );
+    background-repeat:repeat-x;
+    background-size:100% 100%;
+    pointer-events:none;
+    z-index:2;
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+}
+
+/* Topic text */
+.page[data-template="template-08"]
+.topic-text{
+    position:relative;
+    z-index:3;
+    width:100%;
+    height:17mm;
+    margin:0;
+    padding:0;
+    background:transparent;
+    color:#1a1414;
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13pt;
+    font-weight:500;
+    line-height:8mm;
+    white-space:pre-wrap;
+    overflow:hidden;
+    overflow-wrap:anywhere;
+    text-align:left;
+}
+
+
+/* =========================================================
+   13. COURSE AREA — IVORY RIBBON
+========================================================= */
+
+.page[data-template="template-08"]
+.course-area{
+    width:100%;
+    min-width:0;
+    margin-top:2mm;
+    padding:2.4mm 4mm;
+    text-align:center;
+    font-family:"Times New Roman",serif;
+    font-size:13pt;
+    font-weight:600;
+    line-height:1.55;
+    color:#1a1414;
+    overflow:hidden;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            #fef3c7 12%,
+            #fff7ed 50%,
+            #fef3c7 88%,
+            transparent 100%
+        );
+    border-top:.35mm solid rgba(127,29,29,.30);
+    border-bottom:.35mm solid rgba(127,29,29,.30);
+}
+
+.page[data-template="template-08"]
+.course-area > div{
+    width:100%;
+    margin:0;
+    padding:0;
+    white-space:normal;
+    overflow-wrap:anywhere;
+}
+
+.page[data-template="template-08"]
+#courseNameLabel,
+.page[data-template="template-08"]
+#courseCodeLabel{
+    color:#7f1d1d;
+    font-weight:700;
+    letter-spacing:.4px;
+}
+
+.page[data-template="template-08"]
+#previewCourseName,
+.page[data-template="template-08"]
+#previewCourseCode{
+    color:#0c0a09;
+    font-weight:700;
+}
+
+
+/* =========================================================
+   14. SUBMITTED AREA
+========================================================= */
+
+.page[data-template="template-08"]
+.submitted-area{
+    position:relative;
+    width:100%;
+    min-width:0;
+    margin-top:18mm;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    column-gap:18mm;
+    flex:none;
+}
+
+
+/* =========================================================
+   15. CRIMSON + CHARCOAL DOUBLE DIVIDER WITH CENTER DIAMOND
+========================================================= */
+
+.page[data-template="template-08"]
+.submitted-area::before,
+.page[data-template="template-08"]
+.submitted-area::after{
+    content:"";
+    position:absolute;
+    top:-2mm;
+    bottom:0;
+    width:.6mm;
+    z-index:3;
+    pointer-events:none;
+}
+
+.page[data-template="template-08"]
+.submitted-area::before{
+    left:calc(50% - 2.2mm);
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(127,29,29,0) 0%,
+            #7f1d1d 12%,
+            #991b1b 50%,
+            #7f1d1d 88%,
+            rgba(127,29,29,0) 100%
+        );
+}
+
+.page[data-template="template-08"]
+.submitted-area::after{
+    left:calc(50% + 2.2mm);
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(12,10,9,0) 0%,
+            #0c0a09 12%,
+            #1c1917 50%,
+            #0c0a09 88%,
+            rgba(12,10,9,0) 100%
+        );
+}
+
+
+/* =========================================================
+   16. SUBMIT COLUMN
+========================================================= */
+
+.page[data-template="template-08"]
+.submit-column{
+    min-width:0;
+    overflow:hidden;
+    padding-left:5mm;
+    position:relative;
+}
+
+.page[data-template="template-08"]
+.submit-column:first-child{
+    padding-left:5mm;
+}
+
+.page[data-template="template-08"]
+.submit-column:last-child{
+    padding-left:2mm;
+}
+
+
+/* =========================================================
+   17. SUBMITTED HEADING — with crimson corner mark
+========================================================= */
+
+.page[data-template="template-08"]
+.submit-heading{
+    position:relative;
+    width:max-content;
+    max-width:100%;
+    margin:0 0 6mm;
+    padding:0 0 3mm;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:12.5pt;
+    font-weight:800;
+    font-style:italic;
+    line-height:1.25;
+    color:#0c0a09;
+    letter-spacing:.7px;
+    white-space:normal;
+    overflow-wrap:break-word;
+}
+
+.page[data-template="template-08"]
+.submit-heading::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:22mm;
+    height:.9mm;
+    background:
+        linear-gradient(
+            90deg,
+            #7f1d1d 0%,
+            #7f1d1d 40%,
+            #fbbf24 40%,
+            #fbbf24 60%,
+            #0c0a09 60%,
+            #0c0a09 100%
+        );
+    box-shadow:0 0 3mm rgba(127,29,29,.28);
+}
+
+
+/* =========================================================
+   18. SUBMITTED INFORMATION
+========================================================= */
+
+.page[data-template="template-08"]
+.submit-info{
+    width:100%;
+    margin:0;
+    padding:0;
+    font-family:"Times New Roman",serif;
+    font-size:12.5pt;
+    font-weight:400;
+    line-height:1.48;
+    color:#1a1414;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:normal;
+}
+
+.page[data-template="template-08"]
+.submit-info span{
+    display:inline;
+}
+
+.page[data-template="template-08"]
+.vertical-line{
+    display:none !important;
+}
+
+
+/* =========================================================
+   19. DATE — CRIMSON PILL
+========================================================= */
+
+.page[data-template="template-08"]
+.date-area{
+    width:100%;
+    margin-top:auto;
+    padding-top:4mm;
+    text-align:center;
+    font-family:"Roboto Condensed",Arial,sans-serif;
+    font-size:13pt;
+    font-weight:700;
+    line-height:1.3;
+    color:#0c0a09;
+    letter-spacing:.8px;
+    white-space:normal;
+}
+
+.page[data-template="template-08"]
+.date-value{
+    display:inline-block;
+    margin-left:5mm;
+    padding:1.7mm 7mm;
+    border-radius:7mm;
+    background:
+        linear-gradient(
+            135deg,
+            #7f1d1d 0%,
+            #991b1b 55%,
+            #b91c1c 100%
+        );
+    color:#fffbeb;
+    border:.4mm solid #fbbf24;
+    box-shadow:
+        0 1.5mm 4mm rgba(127,29,29,.28),
+        inset 0 0 0 .3mm rgba(255,251,235,.22);
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13pt;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   20. BENGALI MODE
+========================================================= */
+
+.page[data-template="template-08"].lang-bn
+.college-name{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:21pt;
+    line-height:1.35;
+    letter-spacing:0;
+}
+
+.page[data-template="template-08"].lang-bn
+.department{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:18pt;
+    line-height:1.35;
+}
+
+.page[data-template="template-08"].lang-bn
+.assignment-on{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:14.5pt;
+    line-height:1.35;
+    letter-spacing:.5px;
+}
+
+.page[data-template="template-08"].lang-bn
+.assignment-box::before{
+    content:"অ্যাসাইনমেন্ট";
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    letter-spacing:.5px;
+    font-size:8.5pt;
+}
+
+.page[data-template="template-08"].lang-bn
+.topic-label{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:14pt;
+    line-height:8.5mm;
+}
+
+.page[data-template="template-08"].lang-bn
+.topic-text{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13.5pt;
+    line-height:8.5mm;
+}
+
+.page[data-template="template-08"].lang-bn
+.course-area{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13pt;
+    line-height:1.55;
+}
+
+.page[data-template="template-08"].lang-bn
+.submit-heading{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13.5pt;
+    line-height:1.35;
+}
+
+.page[data-template="template-08"].lang-bn
+.submit-info{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13.5pt;
+    line-height:1.55;
+}
+
+.page[data-template="template-08"].lang-bn
+.date-area{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13.5pt;
+}
+
+.page[data-template="template-08"].lang-bn
+.date-value{
+    font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
+    font-size:13pt;
+}
+
+
+/* =========================================================
+   21. MOBILE PREVIEW
+========================================================= */
+
+@media(max-width:520px){
+
+    .page[data-template="template-08"]
+    .college-name{
+        font-size:21pt;
+    }
+
+    .page[data-template="template-08"]
+    .college-logo{
+        width:54mm;
+        height:54mm;
+        margin-top:7mm;
+        margin-bottom:4mm;
+    }
+
+    .page[data-template="template-08"]
+    .department{
+        font-size:17pt;
+    }
+
+    .page[data-template="template-08"]
+    .assignment-box{
+        margin-top:9mm;
+        padding-left:6mm;
+        padding-right:6mm;
+    }
+
+    .page[data-template="template-08"]
+    .submitted-area{
+        margin-top:17mm;
+        column-gap:17mm;
+    }
+}
+
+
+/* =========================================================
+   22. VERY SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px){
+
+    .page[data-template="template-08"]
+    .college-name{
+        font-size:20pt;
+    }
+
+    .page[data-template="template-08"]
+    .department{
+        font-size:16pt;
+    }
+
+    .page[data-template="template-08"]
+    .assignment-on{
+        font-size:13.5pt;
+    }
+
+    .page[data-template="template-08"]
+    .submit-heading{
+        font-size:11.5pt;
+    }
+
+    .page[data-template="template-08"]
+    .submit-info{
+        font-size:12pt;
+    }
+}
+
+
+/* =========================================================
+   23. PRINT / PDF — FORCE ALL COLORS + DOTTED LINES
+========================================================= */
+
+@page{
+    size:A4;
+    margin:0;
+}
+
+@media print{
+
+    html,
+    body{
+        width:210mm;
+        height:297mm;
+        margin:0 !important;
+        padding:0 !important;
+        background:#fff !important;
+    }
+
+    /* FORCE EVERYTHING */
+    .page[data-template="template-08"],
+    .page[data-template="template-08"] *,
+    .page[data-template="template-08"] *::before,
+    .page[data-template="template-08"] *::after{
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+        color-adjust:exact !important;
+    }
+
+    .page[data-template="template-08"]{
+        width:210mm !important;
+        height:297mm !important;
+        margin:0 !important;
+        transform:none !important;
+        box-shadow:none !important;
+        overflow:hidden !important;
+        opacity:1 !important;
+        filter:none !important;
+        background:#fffdfb !important;
+    }
+
+    .page[data-template="template-08"]
+    .page-border{
+        display:none !important;
+        visibility:hidden !important;
+        opacity:0 !important;
+    }
+
+    /* FORCE DIAGONAL SLABS */
+    .page[data-template="template-08"]::before,
+    .page[data-template="template-08"]::after{
+        display:block !important;
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+    }
+
+    /* FORCE DOTTED LINES */
+    .page[data-template="template-08"]
+    .topic-writing-area::before,
+    .page[data-template="template-08"]
+    .topic-writing-area::after{
+        display:block !important;
+        background-image:
+            repeating-linear-gradient(
+                to right,
+                #8b7a6a 0,
+                #8b7a6a 2.2px,
+                transparent 2.2px,
+                transparent 6.6px
+            ) !important;
+        background-repeat:repeat-x !important;
+        background-size:100% 100% !important;
+    }
+
+    .page[data-template="template-08"]
+    .college-name{
+        color:#fffbeb !important;
+    }
+
+    .page[data-template="template-08"]
+    .date-value{
+        color:#fffbeb !important;
+    }
+
+    .page[data-template="template-08"]
+    .college-name::before,
+    .page[data-template="template-08"]
+    .department::before{
+        content:none !important;
+        display:none !important;
+    }
+
+    .page[data-template="template-08"]
+    .assignment-box{
+        box-shadow:
+            0 0 0 .35mm rgba(127,29,29,.55),
+            inset 0 0 0 3mm #ffffff,
+            inset 0 0 0 3.35mm rgba(127,29,29,.35) !important;
+    }
+}
