@@ -289,7 +289,6 @@
 
 /* =========================================================
    08. ASSIGNMENT BOX — ELEVATED IVORY CARD
-   (No ASSIGNMENT tab — HTML already has "ASSIGNMENT ON")
 ========================================================= */
 
 .page[data-template="template-08"] .assignment-box{
@@ -316,7 +315,7 @@
         inset 0 0 0 3.35mm rgba(127,29,29,.18);
 }
 
-/* Crimson top accent bar (replaces old ASSIGNMENT tab) */
+/* Crimson top accent bar */
 .page[data-template="template-08"]
 .assignment-box::before{
     content:"";
@@ -397,7 +396,7 @@
 
 
 /* =========================================================
-   10. TOPIC ROW — (No badge, clean label)
+   10. TOPIC ROW
 ========================================================= */
 
 .page[data-template="template-08"] .topic-row{
@@ -738,14 +737,14 @@
 
 
 /* =========================================================
-   19. DATE AREA — WHITE TEXT ON CRIMSON PILL
+   19. DATE AREA — NO RIBBON
 ========================================================= */
 
 .page[data-template="template-08"]
 .date-area{
     width:100%;
     margin-top:auto;
-    padding:3mm 0 0;
+    padding-top:4mm;
     text-align:center;
     font-family:"Roboto Condensed",Arial,sans-serif;
     font-size:13pt;
@@ -756,47 +755,27 @@
     white-space:normal;
 }
 
-/* Crimson ribbon for date-area so white text is visible */
-.page[data-template="template-08"]
-.date-area::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-    bottom:-3mm;
-    width:130mm;
-    height:11mm;
-    border-radius:7mm;
-    background:
-        linear-gradient(
-            135deg,
-            #7f1d1d 0%,
-            #991b1b 55%,
-            #b91c1c 100%
-        );
-    box-shadow:
-        0 1.5mm 4mm rgba(127,29,29,.28),
-        inset 0 0 0 .35mm rgba(251,191,36,.45);
-    z-index:-1;
-    pointer-events:none;
-}
-
-/* Inline white pill for date value */
+/* Date pill */
 .page[data-template="template-08"]
 .date-value{
     display:inline-block;
     margin-left:5mm;
-    padding:1.5mm 6mm;
+    padding:1.6mm 6mm;
     border-radius:7mm;
     background:
-        rgba(255,255,255,.14);
-    color:#ffffff;
-    border:.35mm solid rgba(251,191,36,.85);
+        linear-gradient(
+            135deg,
+            #fef3c7 0%,
+            #fff7ed 100%
+        );
+    border:.4mm solid #7f1d1d;
     box-shadow:
-        inset 0 0 0 .3mm rgba(255,255,255,.18);
+        0 1mm 3mm rgba(127,29,29,.12),
+        inset 0 0 0 .3mm rgba(251,191,36,.55);
     font-family:"Hind Siliguri","Noto Sans Bengali",sans-serif;
     font-size:13pt;
     font-weight:700;
+    color:#7f1d1d;
     white-space:nowrap;
 }
 
@@ -1023,25 +1002,6 @@
     .page[data-template="template-08"]
     .college-name{
         color:#fffbeb !important;
-    }
-
-    .page[data-template="template-08"]
-    .date-area{
-        color:#ffffff !important;
-    }
-
-    .page[data-template="template-08"]
-    .date-area::before{
-        display:block !important;
-        -webkit-print-color-adjust:exact !important;
-        print-color-adjust:exact !important;
-    }
-
-    .page[data-template="template-08"]
-    .date-value{
-        color:#ffffff !important;
-        -webkit-print-color-adjust:exact !important;
-        print-color-adjust:exact !important;
     }
 
     .page[data-template="template-08"]
